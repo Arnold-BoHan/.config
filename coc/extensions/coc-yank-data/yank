@@ -1,0 +1,389 @@
+c6f0e110d2c19bd42c8f2e54e6aad906|file:///home/bohn/.config/nvim/coc-settings.json|269|1|V|json
+	        "ccls": {
+	            "command": "ccls",
+	            "filetypes": [
+	                "c",
+	                "cpp",
+	                "cuda",
+	                "objc",
+	                "objcpp"
+	            ],
+	            "rootPatterns": [
+	                ".ccls",
+	                ".ccls-root",
+	                "compile_commands.json",
+	                ".git/",
+	                ".hg/"
+	            ],
+	            "initializationOptions": {
+	                "cache": {
+	                    "directory": "/tmp/ccls"
+	                }
+	            }
+	        }
+0bf2e939d7cba75683d52272af893e47|file:///home/bohn/.config/nvim/coc-settings.json|269|26|V|json
+	        "clangd": {complete_info()["selected"] != "-1" ? "\" : "\\
+24feb6714dc8105318dece7b06d169cb|file:///home/bohn/.config/nvim/coc-settings.json|269|26|V|json
+	            "    "command": "clangd",complete_info()["selected"] != "-1" ? "\" : "\\
+a3e309aa977955f46cb82254c747a36e|file:///home/bohn/.config/nvim/coc-settings.json|269|26|V|json
+	            "    "rootPatterns": ["compile_flags.txt", "compile_commands.json"],complete_info()["selected"] != "-1" ? "\" : "\\
+06b40f09a73d2215120e18a99158a6d2|file:///home/bohn/.config/nvim/coc-settings.json|269|26|V|json
+	            "    "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]complete_info()["selected"] != "-1" ? "\1" : "\\
+fdb6ad1ed4fad11dfacc770f75569040|file:///home/bohn/.config/nvim/coc-settings.json|269|17|V|json
+	            "  }
+778f2be6d231266dc6a946200f9bb260|file:///home/bohn/.config/nvim/coc-settings.json|269|18|V|json
+	        clangd: {}
+6068c05fc19ecd81f90a7b27fcc5b965|file:///home/bohn/.config/nvim/coc-settings.json|269|9|v|json
+	ccls
+5e406e1e8726bac799a3a18da5a96e13|file:///home/bohn/.config/nvim/coc-settings.json|271|27|V|json
+	            "filetypes": [
+	                "c",
+	                "cpp",
+	                "cuda",
+	                "objc",
+	                "objcpp"
+2873188dbe8f528939e135feada646f0|file:///home/bohn/.config/nvim/coc-settings.json|271|15|V|json
+	            ],
+fce5169347f12f2bf7e7b007568ca0ae|file:///home/bohn/.config/nvim/init.vim|99|1|V|vim
+	xmap kf <Plug>(coc-funcobj-i)
+	xmap af <Plug>(coc-funcobj-a)
+	omap kf <Plug>(coc-funcobj-i)
+	omap af <Plug>(coc-funcobj-a)
+	xmap kc <Plug>(coc-classobj-i)
+	omap kc <Plug>(coc-classobj-i)
+	xmap ac <Plug>(coc-classobj-a)
+	omap ac <Plug>(coc-classobj-a)
+3f35723b600d666ba05bcf109d9dc01e|file:///home/bohn/.config/nvim/init.vim|98|1|V|vim
+	" Text Objects
+8841794c9d568e1e6939db0e9c358bc6|file:///home/bohn/.config/nvim/init.vim|68|1|V|vim
+	inoremap <silent><expr> <TAB>
+		\ pumvisible() ? "\<C-n>" :
+		\ <SID>check_back_space() ? "\<TAB>" :
+		\ coc#refresh()
+	inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+	inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+	function! s:check_back_space() abort
+		let col = col('.') - 1
+		return !col || getline('.')[col - 1]  =~# '\s'
+	endfunction
+	inoremap <silent><expr> <c-space> coc#refresh()
+	inoremap <silent><expr> <c-o> coc#refresh()
+	function! Show_documentation()
+		call CocActionAsync('highlight')
+		if (index(['vim','help'], &filetype) >= 0)
+			execute 'h '.expand('<cword>')
+		else
+			call CocAction('doHover')
+		endif
+	endfunction
+	nnoremap <LEADER>h :call Show_documentation()<CR>
+	" set runtimepath^=~/.config/nvim/coc-extensions/coc-flutter-tools/
+	" let g:coc_node_args = ['--nolazy', '--inspect-brk=6045']
+	" let $NVIM_COC_LOG_LEVEL = 'debug'
+	" let $NVIM_COC_LOG_FILE = '/Users/david/Desktop/log.txt'
+	
+	nnoremap <silent><nowait> <LEADER>d :CocList diagnostics<cr>
+	nmap <silent> <LEADER>- <Plug>(coc-diagnostic-prev)
+	nmap <silent> <LEADER>= <Plug>(coc-diagnostic-next)
+	nnoremap <c-c> :CocCommand<CR>
+	" Useful commands
+	nnoremap <silent> <space>y :<C-u>CocList -A --normal yank<cr>
+	nmap <silent> gd <Plug>(coc-definition)
+	nmap <silent> gD :tab sp<CR><Plug>(coc-definition)
+	nmap <silent> gy <Plug>(coc-type-definition)
+	" nmap <silent> gi <Plug>(coc-implementation)
+	nmap <silent> gr <Plug>(coc-references)
+	nmap <leader>rn <Plug>(coc-rename)
+	nmap tt :CocCommand explorer<CR>
+	" coc-translator
+	nmap ts <Plug>(coc-translator-p)
+	" Remap for do codeAction of selected region
+	function! s:cocActionsOpenFromSelected(type) abort
+	  execute 'CocCommand actions.open ' . a:type
+	endfunction
+	xmap <leader>a  <Plug>(coc-codeaction-selected)
+	nmap <leader>aw  <Plug>(coc-codeaction-selected)w
+	" coctodolist
+	" nnoremap <leader>tn :CocCommand todolist.create<CR>
+	" nnoremap <leader>tl :CocList todolist<CR>
+	" nnoremap <leader>tu :CocCommand todolist.download<CR>:CocCommand todolist.upload<CR>
+	" coc-tasks
+	noremap <silent> <leader>ts :CocList tasks<CR>
+	" coc-snippets
+	imap <C-l> <Plug>(coc-snippets-expand)
+	vmap <C-e> <Plug>(coc-snippets-select)
+	let g:coc_snippet_next = '<c-e>'
+	let g:coc_snippet_prev = '<c-n>'
+	imap <C-e> <Plug>(coc-snippets-expand-jump)
+	let g:snips_author = 'David Chen'
+	autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
+7ede61ce53b7063569a737c5659a7833|file:///home/bohn/.config/nvim/coc-settings.json|271|27|V|json
+	            "filetypes": [
+	                "c",
+	                "cpp",
+	                "cuda",
+	                "objc",
+	                "objcpp"
+	            ],
+401fcaf0de8da968fdf471132ef865eb|file:///home/bohn/.config/nvim/coc-settings.json|272|18|v|json
+	.ccls
+81536f34cd3259207316d0e60abc4846|file:///home/bohn/.config/nvim/coc-settings.json|273|30|V|json
+	                ".ccls-root",
+b6392d58e5299a4d3e7b8c7e43df35f9|file:///home/bohn/.config/nvim/coc-settings.json|274|25|V|json
+	                ".git/",
+	                ".hg/"
+c7bd8b863bbfa4a166b44a6cccfb9e5f|file:///home/bohn/.config/nvim/coc-settings.json|275|14|v|json
+	initializationOptions
+f8e580c92ed1d615001613609eca93eb|file:///home/bohn/.config/nvim/coc-settings.json|276|23|V|json
+	                "cache": {
+	                    "directory": "/tmp/ccls"
+	                }
+84feeb999e7a2beff59fb36dabda046d|file:///home/bohn/.config/nvim/coc-settings.json|226|4|V|json
+			"clangd": {
+				"command": "clangd",
+				"rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+				"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+			}
+		}
+0faacdaf799c718c56d4f5ad537dc11c|file:///home/bohn/.config/nvim/coc-settings.json|226|1|V|json
+			"clangd": {
+				"command": "clangd",
+				"rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+				"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+447764b333da4114c34fe3a93f47c2b2|file:///home/bohn/n.cc|12|5|V|cpp
+	    cout << "please input your name"
+f11d0f8ba0d8830a6b74c3d585765a68|file:///home/bohn/n.cc|15|5|V|cpp
+	    set_symmetric_differencecc
+3005a4818ebe316f4a7fa90bcaca4097|file:///home/bohn/.config/nvim/init.vim|5|1|V|vim
+	set runtimepath^=~/.vim runtimepath+=~/.vim/after
+	let &packpath = &runtimepath
+	source ~/.vimrc
+64599d8c6dac97ef66205a33a838fed9|file:///home/bohn/.config/nvim/init.vim|5|1|V|vim
+	set runtimepath^=~/.vim runtimepath+=~/.vim/after
+571951380aca7f0ed0abd5957186ae9d|file:///home/bohn/.config/nvim/init.vim|8|1|V|vim
+	
+	set runtimepath^=~/.vim runtimepath+=~/.vim/after
+	let &packpath = &runtimepath
+	source ~/.vimrc
+9415eac85158b79acc3dd9deffba3ae1|file:///home/bohn/.config/nvim/init.vim|4|1|V|vim
+	"setruntimepath^=~/.vim runtimepath+=~/.vim/colors/badwolf.vim 
+64424011c840d9e1b97e34eae9547982|file:///home/bohn/n.cc|16|1|V|cpp
+	        df
+d9ac60858fdabe2810f024dc34a290aa|file:///home/bohn/n.cc|15|17|V|cpp
+	    is_arithmetic
+599447ab75fe327e938fbe3fd8866934|file:///home/bohn/.config/nvim/init.vim|114|1|V|vim
+	xmap <leader>a  <Plug>(coc-codeaction-selected)
+	nmap <leader>aw  <Plug>(coc-codeaction-selected)w
+c9e13995a4c2ed42290119b15d083931|file:///home/bohn/.config/nvim/init.vim|109|1|V|vim
+	nmap ts <Plug>(coc-translator-p)
+e0347bca52d850b1e7620aa20db09565|file:///home/bohn/.config/nvim/init.vim|107|1|V|vim
+	nmap tt :CocCommand explorer<CR>
+c4911ff97a2caf523bdee039669f52ec|file:///home/bohn/.config/nvim/init.vim|38|1|V|vim
+	    \ 'coc-clangd',
+6f056f530b3f3930d339655d4569e840|file:///home/bohn/.config/nvim/coc-settings.json|225|1|V|json
+	        "clangd": {
+	                  "command": "clangd",
+	                  "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+	                  "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+	  }
+2fee8faacdc8a2fa839daecaa1d7873f|file:///home/bohn/.config/nvim/coc-settings.json|226|7|V|json
+			"clangd": {
+				"command": "clangd",
+				"rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+				"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+			}
+a06093d92d3e8c80d8d77c8217772c81|file:///home/bohn/hi.cc|6|26|V|cpp
+	    cout << std::cin >> dd;
+7ede1256c6d8a203d2b9ff3a5602483e|file:///home/bohn/hi.cc|10|9|V|cpp
+	        ""
+d4a7596ce84114191fd536ac7e318a2f|file:///home/bohn/hi.cc|6|9|V|cpp
+	    cincomplete_info()["selected"] != "-1" ? "\" : "\\
+	        complete_info()["selected"] != "-1" ? "\ " : "\\
+	        "complete_info()["selected"] != "-1" ? "\"" : "\\
+	        "complete_info()["selected"] != "-1" ? "\"" : "\\
+a1001403e81de4b4f61d0ba9e9c73b3a|file:///home/bohn/.config/nvim/init.vim|73|4|V|vim
+	inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+a62d231a831b5d08e843af7b03ecdc9b|file:///home/bohn/.config/nvim/init.vim|10|1|V|vim
+	complete_info()["selected"] != "-1" ? "\" : "\\
+dbb01209a85c9febb9a6b0a130406c96|file:///home/bohn/.config/nvim/init.vim|10|22|V|vim
+	set g:tagbar_ctags_bin
+6d806ee3c006752a63cd16e8fa561675|file:///home/bohn/.config/nvim/init.vim|93|27|V|vim
+	nnoremap <silent><nowait> <LEADER>d :CocList diagnostics<cr>
+1e16e21d70fae7f586c83546df32d161|file:///home/bohn/n.cc|13|16|V|cpp
+	    int n = str;
+3b92588321a9d14a76a055aca01ccc45|file:///home/bohn/.vimrc|181|1|V|vim
+	nnoremap <leader>vc :edit ~/.vimrc.custom.config<cr>
+0a4f6b3ac459a714bacf5b0e50edd73a|file:///home/bohn/.vimrc|189|34|V|vim
+	nnoremap <leader>H :execute ":help " . expand("<cword>")<cr>
+3f24e4fea70b3b5d013e0c49e8443496|file:///home/bohn/.vimrc|188|1|V|vim
+	" 打开当前光标所在单词的vim帮助文档
+38d04534520ab6c316f49ece2348cd62|file:///home/bohn/hi.cc|2|5|V|cpp
+	#include <string>complete_info()["selected"] != "-1" ? "\" : "\\
+	    "
+f78838b65ce7fc0bb4c8d0d2663a903e|file:///home/bohn/hi.cc|7|5|V|cpp
+	    std::cin >> n;
+45a2ab4506ef750fe7eb4ad38e7a06c5|file:///home/bohn/.zshrc|12|18|v|zsh
+	rangerS
+cdc228f94ce4a45c13eec3dad76ae05d|file:///home/bohn/.vimrc.custom.config|53|23|v|vim
+	chromium
+d6a5c9544eca9b5ce2266d1c34a93222|file:///home/bohn/.vimrc.custom.config|53|23|v|vim
+	firefox
+a3c8b59b45e19122de90712dbba6dbcd|file:///home/bohn/.vimrc.custom.config|17|1|V|vim
+	" markdown
+	 " let system = system('uname -s')
+9654ee541a2cd5f442c7bbf523310b24|file:///home/bohn/.vimrc.custom.config|47|1|V|vim
+	" +--------------+
+	" |   markdown   |
+	" +--------------+
+	"nmap <leader>mdp <Plug>MarkdownPreview
+	"nmap <leader>mds <Plug>MarkdownPreviewStop
+	"nmap <leader>mdt <Plug>MarkdownPreviewToggle
+	let g:mkdp_browser = 'chromium'
+	" vim-zenzoom2
+	let g:goyo_width=150
+	let g:goyo_margin_top = 2
+	let g:goyo_margin_bottom = 2
+	
+	if has('win16') || has('win32')
+	    au filetype markdown nnoremap <silent> <leader>z :Goyo<cr> | simalt ~x<cr>
+	else 
+	    au filetype markdown nnoremap <silent> <leader>z :Goyo<cr>
+	endif
+d6fe1d0be6347b8ef2427fa629c04485|file:///home/bohn/.config/nvim/init.vim|29|26|v|vim
+	path
+8fb75ae8a77bcdca726783055d3124f5|file:///home/bohn/.config/nvim/init.vim|8|19|V|vim
+	"set termguicolors
+8e9c25654db3594bb373a86a3a5839fa|file:///home/bohn/.vim/plugged/prepare-code/autoload/prepare/prepare.vim|26|1|V|vim
+	    elseif a:suffix == "cpp" || a:suffix == "cc"
+9192c1dd2843e6c2767417e0b7d07027|file:///home/bohn/.vim/plugged/prepare-code/autoload/prepare/prepare.vim|27|12|v|vim
+	a:suffix == "cpp" ||
+98113ccc95cc0ee81b694fa452fff6a6|file:///home/bohn/.config/alacritty/alacritty.yml|107|1|V|yaml
+	    style: Regular
+d2203cb1237cb6460cbad94564e39345|file:///home/bohn/.config/alacritty/alacritty.yml|108|12|v|yaml
+	Regular
+eebca3373ad9ce8d21597e91f482e8de|file:///home/bohn/.config/alacritty/alacritty.yml|96|1|V|yaml
+	  size: 10.0
+aab5a1868b44ff626c284838ac92c94f|file:///home/bohn/.config/alacritty/alacritty.yml|107|5|V|yaml
+	    #
+0bc29d5573e369088ce9a336786f1197|file:///home/bohn/.config/alacritty/alacritty.yml|112|1|V|yaml
+	    # Font family
+	    #
+	    # If the bold family is not specified, it will fall back to the
+	    # value specified for the normal font.
+c15ed346e1dc210639b4d3eaf875145d|file:///home/bohn/.config/alacritty/alacritty.yml|105|1|V|yaml
+	    family: Fira Mono
+612a9494a1663c817cc473c4c6975577|file:///home/bohn/.config/alacritty/aalacritty.yml|108|13|V|yaml
+	    style: Medium
+7fa59be864c3020d0f10cfc0c756302e|file:///home/bohn/.config/alacritty/aalacritty.yml|119|14|V|yaml
+	    style: Bold
+8927b60c84e5339d816d7c1a9f25a17b|file:///home/bohn/.config/alacritty/aalacritty.yml|142|1|V|yaml
+	    style: Bold Italic
+8782eb3888f32680fa917feba3e41322|file:///home/bohn/.config/alacritty/alacritty.yml|105|13|v|yaml
+	Fira Mono
+4045ec8bb7eba018b8110c498b7f3c88|file:///home/bohn/.config/alacritty/alacritty.yml|105|1|V|yaml
+	    family: Monospace
+8dcd69824c6e1a4c67b5c0777689d894|file:///home/bohn/.config/alacritty/alacritty.yml|99|12|V|yaml
+	    size: 17.0
+0ced88956f61aabf365d1407013a2f20|file:///home/bohn/.config/i3/config|459|1|V|conf
+			bindsym Shift+0     gaps outer all set 0
+825a3d98017bab11815ad2817201324c|file:///home/bohn/.config/i3/config|460|11|v|conf
+	Shift
+83e8cd86c669aa925a13480d801389c3|file:///home/bohn/.config/i3/config|460|11|V|conf
+			bindsym 9     gaps outer all set 9
+9f7df318242cd1bc316bda3bd7a022eb|file:///home/bohn/j.cc|6|5|V|cpp
+	    cout << ""
+2402d7ab12000ad3d5852f969a00d23b|file:///home/bohn/.config/i3/config|310|5|v|conf
+	_always --
+1a311528aa97a8338fa8b81cb6bc3dbd|file:///home/bohn/.config/i3/config|446|17|v|conf
+	wlus
+dabe6e597b70e5760826aea1dcc564f7|file:///home/bohn/.config/i3/config|447|17|v|conf
+	minus
+d7d18cfb3a0d8293e2f5d94ea30e04d2|file:///home/bohn/.config/i3/config|458|17|v|conf
+	plus
+0fb18c26411fd265966c34c1b6eff688|file:///home/bohn/.config/i3/config|307|5|v|conf
+	_always 
+a9804bece0a0015cabbf0ccdde255287|file:///home/bohn/.config/i3/config|580|48|v|conf
+	010_MyArch/Pictures/mywallpapers/004.jpg 
+739614e6e102b07fc6aa0a313336e4d0|file:///home/bohn/.config/i3/config|311|21|v|conf
+	google-chrome-stable
+28e3cf9e1f63f8bb4029b8277aba3dea|file:///home/bohn/.config/i3/config|581|49|v|conf
+	~/pictures/mywallpapers/*
+daa1edcf631409e6fe7ed084c5d0a281|file:///home/bohn/.config/i3/config|582|80|v|conf
+	~/图片/*
+d098920ea19788ccfb847a0d1b76198b|file:///home/bohn/test.cc|10|43|V|cpp
+	    // the sigh is same with the former one
+ef036b13f0a8f8ffe3f99f863072650b|file:///home/bohn/test.cc|10|5|V|cpp
+	    int i = -21 % -8;
+a051917a1af36030f12e33d76fab6f6f|file:///home/bohn/test.cc|5|5|V|cpp
+	    std::cout << "Hello world" << std::endl;
+	    std::cout << "nice move yao !" << std::endl;
+	    int n = 3 + 4 * 5;
+0fd020f6afe4995f2d265d9de880cc52|file:///home/bohn/test.cc|5|8|V|cpp
+	    int 
+	    std::cout << "n = "  << n << std::endl;
+64b4d9fc753125ba3045a30852b9ab98|file:///home/bohn/test.cc|16|12|V|cpp
+	    if (true) {
+7bb0edd98f22430a03b67f853e83c2ca|file:///home/bohn/test.cc|16|9|V|cpp
+	        
+ea5a1cbe764918679997181a3ea281d3|file:///home/bohn/test.cc|16|6|V|cpp
+	    }
+ee53f59a15fc80634730d2f0630a7380|file:///home/bohn/test.cc|15|1|V|cpp
+	    std::vector<int> ivec;
+a87deb01c5f539e6bda34829c8ef2368|file:///home/bohn/test.cc|11|5|v|cpp
+	char
+8a94fa28597775ef4110e3672bbac512|file:///home/bohn/test.cc|16|1|V|cpp
+	    std::cout << "i = " << i << std::endl;
+e2942a04780e223b215eb8b663cf5353|file:///home/bohn/test.cc|21|25|v|cpp
+	count
+1862e33e04c1bcd46992e4f4ae3737de|file:///home/bohn/test.cc|23|5|V|cpp
+	    std::cout << "i < n " << c != i < n << std::endl;
+47a3699300120ef2655c1ea699357f98|file:///home/bohn/test.cc|35|7|V|cpp
+	    :w
+3573651478e9a007e05702a2b893352a|file:///home/bohn/test.cc|35|9|V|cpp
+	        k
+1e845f9a239ec2e78e1b9bf5f9ce8287|file:///home/bohn/test.cc|38|1|V|cpp
+	    std::cout << "d = " << d << ", i = " << i << std::endl;
+562ecd4c492a1062c520ef053a248a95|file:///home/bohn/test.cc|57|9|v|cpp
+	{1, 2, 3, 4, 5, 6};
+a0023cebd09af356bdd688a245f2e31e|file:///home/bohn/test.cc|57|9|V|cpp
+	    ivec
+9df22f196a33acd0b372fe502de51211|file:///home/bohn/test.cc|58|11|v|cpp
+	auto
+9e10b4d84af06adb1a897b776a1d296f|file:///home/bohn/test.cc|58|1|V|cpp
+	    while(pbeg != ivec.end() && *pbeg >= 0)
+	        std::cout << *++pbeg << std::endl;
+e96d8afc259593a20838480dfb84400b|file:///home/bohn/test.cc|73|2|v|cpp
+	endif
+8487158c7c479af17c42da40ee1ec5d0|file:///home/bohn/test.cc|71|79|V|cpp
+	        rffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdjdd
+974fc423bd909c2c217e4aadf498c1c0|file:///home/bohn/test.cc|72|1|V|cpp
+	#        rffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdjdd
+	        rffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdjdd
+	        rffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdjdd
+	        rffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdjdd
+	        rffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdjdd
+cb4d6ffb4306afaaef5aaa935baa3bdd|file:///home/bohn/test.cc|74|5|V|cpp
+	    for (auto &j = ivec.begin(); j != ivec.end(); ++j) {
+	        ((j % 2 != 0) ? j = 2 * j : j = j);
+	    }
+8057fec3859ca9df3eb19aad77d68e22|file:///home/bohn/test.cc|56|1|V|cpp
+	    vector<int> ivec{1, 2, 3, 4, 5, 6};
+070c85e98dce828fc6652cce0c81eeb9|file:///home/bohn/test.cc|78|10|v|cpp
+	auto &j = ivec.begin()
+ace58f156cd02a2adccedda6d70390c7|file:///home/bohn/test.cc|78|8|V|cpp
+	    for; ++) {
+15f819e19f251622dd12d434ee0950a8|file:///home/bohn/test.cc|78|1|V|cpp
+	    for (int i = 0; i < count; i++) {
+	        
+	    }
+180a2173241e84ece23011ff401e0a3e|file:///home/bohn/test.cc|80|10|v|cpp
+	; j != ivec.end(); ++j
+d6b75442fd76136c75127baa4c6ab989|file:///home/bohn/test.cc|78|19|V|cpp
+	    for(auto i : )
+	    auto j = ivec.begin();
+b50069dc716031bc6dbc0bd90d44d122|file:///home/bohn/test.cc|79|30|v|cpp
+	 << std::endl
+0e13bfc62b04293f053510d15705c928|file:///home/bohn/test.cc|78|1|V|cpp
+	    for(auto j : ivec)
+	        std::cout << j << " ";
+	    std::cout << std::endl;
