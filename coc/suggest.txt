@@ -1,0 +1,4 @@
+cout|cout|languageserver.clangd
+nor|noremap|vimlsp
+strin|set_symmetric_difference|syntax
+filet|"filetypes"|json

@@ -1,0 +1,832 @@
+c6f0e110d2c19bd42c8f2e54e6aad906|file:///home/bohn/.config/nvim/coc-settings.json|269|1|V|json
+	        "ccls": {
+	            "command": "ccls",
+	            "filetypes": [
+	                "c",
+	                "cpp",
+	                "cuda",
+	                "objc",
+	                "objcpp"
+	            ],
+	            "rootPatterns": [
+	                ".ccls",
+	                ".ccls-root",
+	                "compile_commands.json",
+	                ".git/",
+	                ".hg/"
+	            ],
+	            "initializationOptions": {
+	                "cache": {
+	                    "directory": "/tmp/ccls"
+	                }
+	            }
+	        }
+0bf2e939d7cba75683d52272af893e47|file:///home/bohn/.config/nvim/coc-settings.json|269|26|V|json
+	        "clangd": {complete_info()["selected"] != "-1" ? "\" : "\\
+24feb6714dc8105318dece7b06d169cb|file:///home/bohn/.config/nvim/coc-settings.json|269|26|V|json
+	            "    "command": "clangd",complete_info()["selected"] != "-1" ? "\" : "\\
+a3e309aa977955f46cb82254c747a36e|file:///home/bohn/.config/nvim/coc-settings.json|269|26|V|json
+	            "    "rootPatterns": ["compile_flags.txt", "compile_commands.json"],complete_info()["selected"] != "-1" ? "\" : "\\
+06b40f09a73d2215120e18a99158a6d2|file:///home/bohn/.config/nvim/coc-settings.json|269|26|V|json
+	            "    "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]complete_info()["selected"] != "-1" ? "\1" : "\\
+fdb6ad1ed4fad11dfacc770f75569040|file:///home/bohn/.config/nvim/coc-settings.json|269|17|V|json
+	            "  }
+778f2be6d231266dc6a946200f9bb260|file:///home/bohn/.config/nvim/coc-settings.json|269|18|V|json
+	        clangd: {}
+6068c05fc19ecd81f90a7b27fcc5b965|file:///home/bohn/.config/nvim/coc-settings.json|269|9|v|json
+	ccls
+5e406e1e8726bac799a3a18da5a96e13|file:///home/bohn/.config/nvim/coc-settings.json|271|27|V|json
+	            "filetypes": [
+	                "c",
+	                "cpp",
+	                "cuda",
+	                "objc",
+	                "objcpp"
+2873188dbe8f528939e135feada646f0|file:///home/bohn/.config/nvim/coc-settings.json|271|15|V|json
+	            ],
+fce5169347f12f2bf7e7b007568ca0ae|file:///home/bohn/.config/nvim/init.vim|99|1|V|vim
+	xmap kf <Plug>(coc-funcobj-i)
+	xmap af <Plug>(coc-funcobj-a)
+	omap kf <Plug>(coc-funcobj-i)
+	omap af <Plug>(coc-funcobj-a)
+	xmap kc <Plug>(coc-classobj-i)
+	omap kc <Plug>(coc-classobj-i)
+	xmap ac <Plug>(coc-classobj-a)
+	omap ac <Plug>(coc-classobj-a)
+3f35723b600d666ba05bcf109d9dc01e|file:///home/bohn/.config/nvim/init.vim|98|1|V|vim
+	" Text Objects
+8841794c9d568e1e6939db0e9c358bc6|file:///home/bohn/.config/nvim/init.vim|68|1|V|vim
+	inoremap <silent><expr> <TAB>
+		\ pumvisible() ? "\<C-n>" :
+		\ <SID>check_back_space() ? "\<TAB>" :
+		\ coc#refresh()
+	inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+	inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+	function! s:check_back_space() abort
+		let col = col('.') - 1
+		return !col || getline('.')[col - 1]  =~# '\s'
+	endfunction
+	inoremap <silent><expr> <c-space> coc#refresh()
+	inoremap <silent><expr> <c-o> coc#refresh()
+	function! Show_documentation()
+		call CocActionAsync('highlight')
+		if (index(['vim','help'], &filetype) >= 0)
+			execute 'h '.expand('<cword>')
+		else
+			call CocAction('doHover')
+		endif
+	endfunction
+	nnoremap <LEADER>h :call Show_documentation()<CR>
+	" set runtimepath^=~/.config/nvim/coc-extensions/coc-flutter-tools/
+	" let g:coc_node_args = ['--nolazy', '--inspect-brk=6045']
+	" let $NVIM_COC_LOG_LEVEL = 'debug'
+	" let $NVIM_COC_LOG_FILE = '/Users/david/Desktop/log.txt'
+	
+	nnoremap <silent><nowait> <LEADER>d :CocList diagnostics<cr>
+	nmap <silent> <LEADER>- <Plug>(coc-diagnostic-prev)
+	nmap <silent> <LEADER>= <Plug>(coc-diagnostic-next)
+	nnoremap <c-c> :CocCommand<CR>
+	" Useful commands
+	nnoremap <silent> <space>y :<C-u>CocList -A --normal yank<cr>
+	nmap <silent> gd <Plug>(coc-definition)
+	nmap <silent> gD :tab sp<CR><Plug>(coc-definition)
+	nmap <silent> gy <Plug>(coc-type-definition)
+	" nmap <silent> gi <Plug>(coc-implementation)
+	nmap <silent> gr <Plug>(coc-references)
+	nmap <leader>rn <Plug>(coc-rename)
+	nmap tt :CocCommand explorer<CR>
+	" coc-translator
+	nmap ts <Plug>(coc-translator-p)
+	" Remap for do codeAction of selected region
+	function! s:cocActionsOpenFromSelected(type) abort
+	  execute 'CocCommand actions.open ' . a:type
+	endfunction
+	xmap <leader>a  <Plug>(coc-codeaction-selected)
+	nmap <leader>aw  <Plug>(coc-codeaction-selected)w
+	" coctodolist
+	" nnoremap <leader>tn :CocCommand todolist.create<CR>
+	" nnoremap <leader>tl :CocList todolist<CR>
+	" nnoremap <leader>tu :CocCommand todolist.download<CR>:CocCommand todolist.upload<CR>
+	" coc-tasks
+	noremap <silent> <leader>ts :CocList tasks<CR>
+	" coc-snippets
+	imap <C-l> <Plug>(coc-snippets-expand)
+	vmap <C-e> <Plug>(coc-snippets-select)
+	let g:coc_snippet_next = '<c-e>'
+	let g:coc_snippet_prev = '<c-n>'
+	imap <C-e> <Plug>(coc-snippets-expand-jump)
+	let g:snips_author = 'David Chen'
+	autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
+7ede61ce53b7063569a737c5659a7833|file:///home/bohn/.config/nvim/coc-settings.json|271|27|V|json
+	            "filetypes": [
+	                "c",
+	                "cpp",
+	                "cuda",
+	                "objc",
+	                "objcpp"
+	            ],
+401fcaf0de8da968fdf471132ef865eb|file:///home/bohn/.config/nvim/coc-settings.json|272|18|v|json
+	.ccls
+81536f34cd3259207316d0e60abc4846|file:///home/bohn/.config/nvim/coc-settings.json|273|30|V|json
+	                ".ccls-root",
+b6392d58e5299a4d3e7b8c7e43df35f9|file:///home/bohn/.config/nvim/coc-settings.json|274|25|V|json
+	                ".git/",
+	                ".hg/"
+c7bd8b863bbfa4a166b44a6cccfb9e5f|file:///home/bohn/.config/nvim/coc-settings.json|275|14|v|json
+	initializationOptions
+f8e580c92ed1d615001613609eca93eb|file:///home/bohn/.config/nvim/coc-settings.json|276|23|V|json
+	                "cache": {
+	                    "directory": "/tmp/ccls"
+	                }
+84feeb999e7a2beff59fb36dabda046d|file:///home/bohn/.config/nvim/coc-settings.json|226|4|V|json
+			"clangd": {
+				"command": "clangd",
+				"rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+				"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+			}
+		}
+0faacdaf799c718c56d4f5ad537dc11c|file:///home/bohn/.config/nvim/coc-settings.json|226|1|V|json
+			"clangd": {
+				"command": "clangd",
+				"rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+				"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+447764b333da4114c34fe3a93f47c2b2|file:///home/bohn/n.cc|12|5|V|cpp
+	    cout << "please input your name"
+f11d0f8ba0d8830a6b74c3d585765a68|file:///home/bohn/n.cc|15|5|V|cpp
+	    set_symmetric_differencecc
+3005a4818ebe316f4a7fa90bcaca4097|file:///home/bohn/.config/nvim/init.vim|5|1|V|vim
+	set runtimepath^=~/.vim runtimepath+=~/.vim/after
+	let &packpath = &runtimepath
+	source ~/.vimrc
+64599d8c6dac97ef66205a33a838fed9|file:///home/bohn/.config/nvim/init.vim|5|1|V|vim
+	set runtimepath^=~/.vim runtimepath+=~/.vim/after
+571951380aca7f0ed0abd5957186ae9d|file:///home/bohn/.config/nvim/init.vim|8|1|V|vim
+	
+	set runtimepath^=~/.vim runtimepath+=~/.vim/after
+	let &packpath = &runtimepath
+	source ~/.vimrc
+9415eac85158b79acc3dd9deffba3ae1|file:///home/bohn/.config/nvim/init.vim|4|1|V|vim
+	"setruntimepath^=~/.vim runtimepath+=~/.vim/colors/badwolf.vim 
+64424011c840d9e1b97e34eae9547982|file:///home/bohn/n.cc|16|1|V|cpp
+	        df
+d9ac60858fdabe2810f024dc34a290aa|file:///home/bohn/n.cc|15|17|V|cpp
+	    is_arithmetic
+599447ab75fe327e938fbe3fd8866934|file:///home/bohn/.config/nvim/init.vim|114|1|V|vim
+	xmap <leader>a  <Plug>(coc-codeaction-selected)
+	nmap <leader>aw  <Plug>(coc-codeaction-selected)w
+c9e13995a4c2ed42290119b15d083931|file:///home/bohn/.config/nvim/init.vim|109|1|V|vim
+	nmap ts <Plug>(coc-translator-p)
+e0347bca52d850b1e7620aa20db09565|file:///home/bohn/.config/nvim/init.vim|107|1|V|vim
+	nmap tt :CocCommand explorer<CR>
+c4911ff97a2caf523bdee039669f52ec|file:///home/bohn/.config/nvim/init.vim|38|1|V|vim
+	    \ 'coc-clangd',
+6f056f530b3f3930d339655d4569e840|file:///home/bohn/.config/nvim/coc-settings.json|225|1|V|json
+	        "clangd": {
+	                  "command": "clangd",
+	                  "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+	                  "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+	  }
+2fee8faacdc8a2fa839daecaa1d7873f|file:///home/bohn/.config/nvim/coc-settings.json|226|7|V|json
+			"clangd": {
+				"command": "clangd",
+				"rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+				"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+			}
+a06093d92d3e8c80d8d77c8217772c81|file:///home/bohn/hi.cc|6|26|V|cpp
+	    cout << std::cin >> dd;
+7ede1256c6d8a203d2b9ff3a5602483e|file:///home/bohn/hi.cc|10|9|V|cpp
+	        ""
+d4a7596ce84114191fd536ac7e318a2f|file:///home/bohn/hi.cc|6|9|V|cpp
+	    cincomplete_info()["selected"] != "-1" ? "\" : "\\
+	        complete_info()["selected"] != "-1" ? "\ " : "\\
+	        "complete_info()["selected"] != "-1" ? "\"" : "\\
+	        "complete_info()["selected"] != "-1" ? "\"" : "\\
+a1001403e81de4b4f61d0ba9e9c73b3a|file:///home/bohn/.config/nvim/init.vim|73|4|V|vim
+	inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+a62d231a831b5d08e843af7b03ecdc9b|file:///home/bohn/.config/nvim/init.vim|10|1|V|vim
+	complete_info()["selected"] != "-1" ? "\" : "\\
+dbb01209a85c9febb9a6b0a130406c96|file:///home/bohn/.config/nvim/init.vim|10|22|V|vim
+	set g:tagbar_ctags_bin
+6d806ee3c006752a63cd16e8fa561675|file:///home/bohn/.config/nvim/init.vim|93|27|V|vim
+	nnoremap <silent><nowait> <LEADER>d :CocList diagnostics<cr>
+1e16e21d70fae7f586c83546df32d161|file:///home/bohn/n.cc|13|16|V|cpp
+	    int n = str;
+3b92588321a9d14a76a055aca01ccc45|file:///home/bohn/.vimrc|181|1|V|vim
+	nnoremap <leader>vc :edit ~/.vimrc.custom.config<cr>
+0a4f6b3ac459a714bacf5b0e50edd73a|file:///home/bohn/.vimrc|189|34|V|vim
+	nnoremap <leader>H :execute ":help " . expand("<cword>")<cr>
+3f24e4fea70b3b5d013e0c49e8443496|file:///home/bohn/.vimrc|188|1|V|vim
+	" 打开当前光标所在单词的vim帮助文档
+38d04534520ab6c316f49ece2348cd62|file:///home/bohn/hi.cc|2|5|V|cpp
+	#include <string>complete_info()["selected"] != "-1" ? "\" : "\\
+	    "
+f78838b65ce7fc0bb4c8d0d2663a903e|file:///home/bohn/hi.cc|7|5|V|cpp
+	    std::cin >> n;
+45a2ab4506ef750fe7eb4ad38e7a06c5|file:///home/bohn/.zshrc|12|18|v|zsh
+	rangerS
+cdc228f94ce4a45c13eec3dad76ae05d|file:///home/bohn/.vimrc.custom.config|53|23|v|vim
+	chromium
+d6a5c9544eca9b5ce2266d1c34a93222|file:///home/bohn/.vimrc.custom.config|53|23|v|vim
+	firefox
+a3c8b59b45e19122de90712dbba6dbcd|file:///home/bohn/.vimrc.custom.config|17|1|V|vim
+	" markdown
+	 " let system = system('uname -s')
+9654ee541a2cd5f442c7bbf523310b24|file:///home/bohn/.vimrc.custom.config|47|1|V|vim
+	" +--------------+
+	" |   markdown   |
+	" +--------------+
+	"nmap <leader>mdp <Plug>MarkdownPreview
+	"nmap <leader>mds <Plug>MarkdownPreviewStop
+	"nmap <leader>mdt <Plug>MarkdownPreviewToggle
+	let g:mkdp_browser = 'chromium'
+	" vim-zenzoom2
+	let g:goyo_width=150
+	let g:goyo_margin_top = 2
+	let g:goyo_margin_bottom = 2
+	
+	if has('win16') || has('win32')
+	    au filetype markdown nnoremap <silent> <leader>z :Goyo<cr> | simalt ~x<cr>
+	else 
+	    au filetype markdown nnoremap <silent> <leader>z :Goyo<cr>
+	endif
+d6fe1d0be6347b8ef2427fa629c04485|file:///home/bohn/.config/nvim/init.vim|29|26|v|vim
+	path
+8fb75ae8a77bcdca726783055d3124f5|file:///home/bohn/.config/nvim/init.vim|8|19|V|vim
+	"set termguicolors
+8e9c25654db3594bb373a86a3a5839fa|file:///home/bohn/.vim/plugged/prepare-code/autoload/prepare/prepare.vim|26|1|V|vim
+	    elseif a:suffix == "cpp" || a:suffix == "cc"
+9192c1dd2843e6c2767417e0b7d07027|file:///home/bohn/.vim/plugged/prepare-code/autoload/prepare/prepare.vim|27|12|v|vim
+	a:suffix == "cpp" ||
+98113ccc95cc0ee81b694fa452fff6a6|file:///home/bohn/.config/alacritty/alacritty.yml|107|1|V|yaml
+	    style: Regular
+d2203cb1237cb6460cbad94564e39345|file:///home/bohn/.config/alacritty/alacritty.yml|108|12|v|yaml
+	Regular
+eebca3373ad9ce8d21597e91f482e8de|file:///home/bohn/.config/alacritty/alacritty.yml|96|1|V|yaml
+	  size: 10.0
+aab5a1868b44ff626c284838ac92c94f|file:///home/bohn/.config/alacritty/alacritty.yml|107|5|V|yaml
+	    #
+0bc29d5573e369088ce9a336786f1197|file:///home/bohn/.config/alacritty/alacritty.yml|112|1|V|yaml
+	    # Font family
+	    #
+	    # If the bold family is not specified, it will fall back to the
+	    # value specified for the normal font.
+c15ed346e1dc210639b4d3eaf875145d|file:///home/bohn/.config/alacritty/alacritty.yml|105|1|V|yaml
+	    family: Fira Mono
+612a9494a1663c817cc473c4c6975577|file:///home/bohn/.config/alacritty/aalacritty.yml|108|13|V|yaml
+	    style: Medium
+7fa59be864c3020d0f10cfc0c756302e|file:///home/bohn/.config/alacritty/aalacritty.yml|119|14|V|yaml
+	    style: Bold
+8927b60c84e5339d816d7c1a9f25a17b|file:///home/bohn/.config/alacritty/aalacritty.yml|142|1|V|yaml
+	    style: Bold Italic
+8782eb3888f32680fa917feba3e41322|file:///home/bohn/.config/alacritty/alacritty.yml|105|13|v|yaml
+	Fira Mono
+4045ec8bb7eba018b8110c498b7f3c88|file:///home/bohn/.config/alacritty/alacritty.yml|105|1|V|yaml
+	    family: Monospace
+8dcd69824c6e1a4c67b5c0777689d894|file:///home/bohn/.config/alacritty/alacritty.yml|99|12|V|yaml
+	    size: 17.0
+0ced88956f61aabf365d1407013a2f20|file:///home/bohn/.config/i3/config|459|1|V|conf
+			bindsym Shift+0     gaps outer all set 0
+825a3d98017bab11815ad2817201324c|file:///home/bohn/.config/i3/config|460|11|v|conf
+	Shift
+83e8cd86c669aa925a13480d801389c3|file:///home/bohn/.config/i3/config|460|11|V|conf
+			bindsym 9     gaps outer all set 9
+9f7df318242cd1bc316bda3bd7a022eb|file:///home/bohn/j.cc|6|5|V|cpp
+	    cout << ""
+2402d7ab12000ad3d5852f969a00d23b|file:///home/bohn/.config/i3/config|310|5|v|conf
+	_always --
+1a311528aa97a8338fa8b81cb6bc3dbd|file:///home/bohn/.config/i3/config|446|17|v|conf
+	wlus
+dabe6e597b70e5760826aea1dcc564f7|file:///home/bohn/.config/i3/config|447|17|v|conf
+	minus
+d7d18cfb3a0d8293e2f5d94ea30e04d2|file:///home/bohn/.config/i3/config|458|17|v|conf
+	plus
+0fb18c26411fd265966c34c1b6eff688|file:///home/bohn/.config/i3/config|307|5|v|conf
+	_always 
+a9804bece0a0015cabbf0ccdde255287|file:///home/bohn/.config/i3/config|580|48|v|conf
+	010_MyArch/Pictures/mywallpapers/004.jpg 
+739614e6e102b07fc6aa0a313336e4d0|file:///home/bohn/.config/i3/config|311|21|v|conf
+	google-chrome-stable
+28e3cf9e1f63f8bb4029b8277aba3dea|file:///home/bohn/.config/i3/config|581|49|v|conf
+	~/pictures/mywallpapers/*
+daa1edcf631409e6fe7ed084c5d0a281|file:///home/bohn/.config/i3/config|582|80|v|conf
+	~/图片/*
+d098920ea19788ccfb847a0d1b76198b|file:///home/bohn/test.cc|10|43|V|cpp
+	    // the sigh is same with the former one
+ef036b13f0a8f8ffe3f99f863072650b|file:///home/bohn/test.cc|10|5|V|cpp
+	    int i = -21 % -8;
+a051917a1af36030f12e33d76fab6f6f|file:///home/bohn/test.cc|5|5|V|cpp
+	    std::cout << "Hello world" << std::endl;
+	    std::cout << "nice move yao !" << std::endl;
+	    int n = 3 + 4 * 5;
+0fd020f6afe4995f2d265d9de880cc52|file:///home/bohn/test.cc|5|8|V|cpp
+	    int 
+	    std::cout << "n = "  << n << std::endl;
+64b4d9fc753125ba3045a30852b9ab98|file:///home/bohn/test.cc|16|12|V|cpp
+	    if (true) {
+7bb0edd98f22430a03b67f853e83c2ca|file:///home/bohn/test.cc|16|9|V|cpp
+	        
+ea5a1cbe764918679997181a3ea281d3|file:///home/bohn/test.cc|16|6|V|cpp
+	    }
+ee53f59a15fc80634730d2f0630a7380|file:///home/bohn/test.cc|15|1|V|cpp
+	    std::vector<int> ivec;
+a87deb01c5f539e6bda34829c8ef2368|file:///home/bohn/test.cc|11|5|v|cpp
+	char
+8a94fa28597775ef4110e3672bbac512|file:///home/bohn/test.cc|16|1|V|cpp
+	    std::cout << "i = " << i << std::endl;
+e2942a04780e223b215eb8b663cf5353|file:///home/bohn/test.cc|21|25|v|cpp
+	count
+1862e33e04c1bcd46992e4f4ae3737de|file:///home/bohn/test.cc|23|5|V|cpp
+	    std::cout << "i < n " << c != i < n << std::endl;
+47a3699300120ef2655c1ea699357f98|file:///home/bohn/test.cc|35|7|V|cpp
+	    :w
+3573651478e9a007e05702a2b893352a|file:///home/bohn/test.cc|35|9|V|cpp
+	        k
+1e845f9a239ec2e78e1b9bf5f9ce8287|file:///home/bohn/test.cc|38|1|V|cpp
+	    std::cout << "d = " << d << ", i = " << i << std::endl;
+562ecd4c492a1062c520ef053a248a95|file:///home/bohn/test.cc|57|9|v|cpp
+	{1, 2, 3, 4, 5, 6};
+a0023cebd09af356bdd688a245f2e31e|file:///home/bohn/test.cc|57|9|V|cpp
+	    ivec
+9df22f196a33acd0b372fe502de51211|file:///home/bohn/test.cc|58|11|v|cpp
+	auto
+9e10b4d84af06adb1a897b776a1d296f|file:///home/bohn/test.cc|58|1|V|cpp
+	    while(pbeg != ivec.end() && *pbeg >= 0)
+	        std::cout << *++pbeg << std::endl;
+e96d8afc259593a20838480dfb84400b|file:///home/bohn/test.cc|73|2|v|cpp
+	endif
+8487158c7c479af17c42da40ee1ec5d0|file:///home/bohn/test.cc|71|79|V|cpp
+	        rffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdjdd
+974fc423bd909c2c217e4aadf498c1c0|file:///home/bohn/test.cc|72|1|V|cpp
+	#        rffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdjdd
+	        rffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdjdd
+	        rffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdjdd
+	        rffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdjdd
+	        rffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdjdd
+cb4d6ffb4306afaaef5aaa935baa3bdd|file:///home/bohn/test.cc|74|5|V|cpp
+	    for (auto &j = ivec.begin(); j != ivec.end(); ++j) {
+	        ((j % 2 != 0) ? j = 2 * j : j = j);
+	    }
+8057fec3859ca9df3eb19aad77d68e22|file:///home/bohn/test.cc|56|1|V|cpp
+	    vector<int> ivec{1, 2, 3, 4, 5, 6};
+070c85e98dce828fc6652cce0c81eeb9|file:///home/bohn/test.cc|78|10|v|cpp
+	auto &j = ivec.begin()
+ace58f156cd02a2adccedda6d70390c7|file:///home/bohn/test.cc|78|8|V|cpp
+	    for; ++) {
+15f819e19f251622dd12d434ee0950a8|file:///home/bohn/test.cc|78|1|V|cpp
+	    for (int i = 0; i < count; i++) {
+	        
+	    }
+180a2173241e84ece23011ff401e0a3e|file:///home/bohn/test.cc|80|10|v|cpp
+	; j != ivec.end(); ++j
+d6b75442fd76136c75127baa4c6ab989|file:///home/bohn/test.cc|78|19|V|cpp
+	    for(auto i : )
+	    auto j = ivec.begin();
+b50069dc716031bc6dbc0bd90d44d122|file:///home/bohn/test.cc|79|30|v|cpp
+	 << std::endl
+0e13bfc62b04293f053510d15705c928|file:///home/bohn/test.cc|78|1|V|cpp
+	    for(auto j : ivec)
+	        std::cout << j << " ";
+	    std::cout << std::endl;
+4698850447aa09571776addcb6a2911b|file:///home/bohn/.config/ranger/rifle.conf|88|39|v|cfg
+	EDITOR
+15e1d7870e49b52993071bc133405ef3|file:///home/bohn/.config/ranger/rifle.conf|90|97|v|cfg
+	$EDITOR
+1502d16ce474b2c81a36dd65e76023f1|file:///home/bohn/test.cc|17|1|V|cpp
+	    int n = 5;
+92603cdbc4a87b86c03debfa5b92553e|file:///home/bohn/test.cc|73|1|v|cpp
+	    /* cout << grade < 60 ? "fail" : "pass" ; */
+c76fa212be30e2c128301be540780c1d|file:///home/bohn/.zshrc|18|9|V|zsh
+	alias nv=nvim
+8956e1cda345e2a103fd858ff312b3f0|file:///home/bohn/test.cc|87|1|V|cpp
+	    c
+218283a3ebce43d0b53a12aabe675d46|untitled:1|1|2|V|
+	       cc
+17d488214c68b05b3eb97415a81b6bed|file:///home/bohn/test.cc|88|2|V|cpp
+		 	cout << "nice" << endl;
+617eee7c076698bb3c875e874d1e8ea9|file:///home/bohn/.config/nvim/init.vim|180|1|V|vim
+	noremap <silent> gu gk
+	noremap <silent> ge gj
+	noremap <silent> \v v$h
+	
+	" U/E keys for 5 times u/e (faster navigation)
+	noremap <silent> U 5k
+	noremap <silent> E 5j
+	
+	" N key: go to the start of the line
+	noremap <silent> N 0
+	" I key: go to the end of the line
+	noremap <silent> I $
+	
+	" Faster in-line navigation
+	noremap W 5w
+	noremap B 5b
+	
+	" set h (same as n, cursor left) to 'end of word'
+	noremap h e
+	
+	" Ctrl + U or E will move up/down the view port without moving the cursor
+	noremap <C-U> 5<C-y>
+	noremap <C-E> 5<C-e>
+	
+	
+	
+	source $XDG_CONFIG_HOME/nvim/cursor.vim
+	
+	"If you use Qwerty keyboard, uncomment the next line.
+	"source $XDG_CONFIG_HOME/nvim/cursor_for_qwerty.vim
+	
+	" ===
+	" === Insert Mode Cursor Movement
+	" ===
+	inoremap <C-a> <ESC>A
+	
+72cf95b27563bd26af61203cd989fdb1|file:///home/bohn/.config/nvim/init.vim|36|8|v|vim
+	$XDG_CONFIG_HOME
+72f2f344ef43c1072c083fc14987651c|file:///home/bohn/.config/nvim/init.vim|206|8|v|vim
+	XDG_CONFIG_HOME
+17cfcb43550bb409b76c7157c504d0ee|file:///home/bohn/.config/nvim/README_cn.md|169|1|v|markdown
+	| `Y`    | 复制选中文本至**系统剪切板** |
+	
+0d3f6a32b3e04ce82319656404bb348c|file:///home/bohn/.config/nvim/init.vim|223|1|v|vim
+	cnoremap
+fff4398f36ed703d42375a496ee325fc|file:///home/bohn/.config/nvim_myOwn/coc-settings.json|16|1|v|jsonc
+		"suggest.enablePreview": true,
+3494e11777e7ace7c31fe72d9bee2c2e|file:///home/bohn/test.cc|87|1|V|cpp
+			cout
+5703f441b323e4ec7b1b87ef3b386cb9|file:///home/bohn/test.cc|86|1|V|cpp
+	    std::cout << std::endl;
+94ccb1cf26df8d05001c7c2462175783|file:///home/bohn/test.cc|88|4|V|cpp
+				:
+d258067f0ce0bac092bd4e2187421c86|file:///home/bohn/test.cc|89|1|V|cpp
+				:qq
+7720fed8e90e66ee5c55e78f491ce9ae|file:///home/bohn/.config/nvim/README_cn.md|423|1|V|markdown
+	### 其它
+	#### [vim-calendar](https://github.com/itchyny/calendar.vim)
+5b9ff8b5f252d9775cf898d62f677687|file:///home/bohn/test.cc|86|3|V|cpp
+			std::cout
+7611c3dd08fd6af6519a1914ed3b30f0|file:///home/bohn/md.md|1|12|V|markdown
+	# The first one 
+f6a49a9d436d75b3fdca2dbd419e982f|file:///home/bohn/.config/nvim/init.vim|421|1|V|vim
+	"Plug 'Xuyuanp/nerdtree-git-plugin'
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
+	Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+	Plug 'kevinhwang91/rnvimr'
+	Plug 'airblade/vim-rooter'
+	Plug 'pechorin/any-jump.vim'
+	
+	" Taglist
+	Plug 'liuchengxu/vista.vim'
+	
+	" Debugger
+	" Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-c --enable-python --enable-go'}
+	
+	" Auto Complete
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	" Plug 'neoclide/coc.nvim', {'branch': 'release', 'tag': 'v0.0.79'}
+	Plug 'wellle/tmux-complete.vim'
+	
+	" Snippets
+	" Plug 'SirVer/ultisnips'
+	Plug 'theniceboy/vim-snippets'
+	
+	" Undo Tree
+	Plug 'mbbill/undotree'
+	
+	" Git
+	Plug 'theniceboy/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
+	Plug 'theniceboy/fzf-gitignore', { 'do': ':UpdateRemotePlugins' }
+	"Plug 'mhinz/vim-signify'
+	Plug 'airblade/vim-gitgutter'
+	Plug 'cohama/agit.vim'
+	Plug 'kdheepak/lazygit.nvim'
+	
+	" Tex
+	" Plug 'lervag/vimtex'
+	
+	" CSharp
+	Plug 'OmniSharp/omnisharp-vim'
+	Plug 'ctrlpvim/ctrlp.vim' , { 'for': ['cs', 'vim-plug'] } " omnisharp-vim dependency
+	
+	" HTML, CSS, JavaScript, Typescript, PHP, JSON, etc.
+	Plug 'elzr/vim-json'
+	Plug 'neoclide/jsonc.vim'
+	Plug 'othree/html5.vim'
+	Plug 'alvan/vim-closetag'
+	" Plug 'hail2u/vim-css3-syntax' " , { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
+	" Plug 'spf13/PIV', { 'for' :['php', 'vim-plug'] }
+	" Plug 'pangloss/vim-javascript', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
+	Plug 'yuezk/vim-js', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
+	" Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
+	" Plug 'jelera/vim-javascript-syntax', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
+	"Plug 'jaxbot/browserlink.vim'
+	Plug 'HerringtonDarkholme/yats.vim'
+	" Plug 'posva/vim-vue'
+	" Plug 'evanleck/vim-svelte', {'branch': 'main'}
+	" Plug 'leafOfTree/vim-svelte-plugin'
+	" Plug 'leafgarland/typescript-vim'
+	Plug 'MaxMEllon/vim-jsx-pretty'
+	Plug 'pangloss/vim-javascript'
+	Plug 'leafgarland/typescript-vim'
+	Plug 'peitalin/vim-jsx-typescript'
+	Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+	Plug 'pantharshit00/vim-prisma'
+	
+	" Go
+	Plug 'fatih/vim-go' , { 'for': ['go', 'vim-plug'], 'tag': '*' }
+	
+	" Python
+	" Plug 'tmhedberg/SimpylFold', { 'for' :['python', 'vim-plug'] }
+	Plug 'Vimjas/vim-python-pep8-indent', { 'for' :['python', 'vim-plug'] }
+	Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins', 'for' :['python', 'vim-plug'] }
+	"Plug 'vim-scripts/indentpython.vim', { 'for' :['python', 'vim-plug'] }
+	"Plug 'plytophogy/vim-virtualenv', { 'for' :['python', 'vim-plug'] }
+	Plug 'tweekmonster/braceless.vim', { 'for' :['python', 'vim-plug'] }
+	
+	" Flutter
+	Plug 'dart-lang/dart-vim-plugin'
+	
+	" Swift
+	Plug 'keith/swift.vim'
+	Plug 'arzg/vim-swift'
+	
+	" Markdown
+	Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+	Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'markdown', 'vim-plug'] }
+	Plug 'mzlogin/vim-markdown-toc', { 'for': ['gitignore', 'markdown', 'vim-plug'] }
+	Plug 'dkarter/bullets.vim'
+	
+	" Other filetypes
+	" Plug 'jceb/vim-orgmode', {'for': ['vim-plug', 'org']}
+	
+	" Editor Enhancement
+	"Plug 'Raimondi/delimitMate'
+	Plug 'jiangmiao/auto-pairs'
+	Plug 'mg979/vim-visual-multi'
+	Plug 'tomtom/tcomment_vim' " in <space>cn to comment a line
+	Plug 'theniceboy/antovim' " gs to switch
+	Plug 'tpope/vim-surround' " type yskw' to wrap the word with '' or type cs'` to change 'word' to `word`
+	Plug 'gcmt/wildfire.vim' " in Visual mode, type k' to select all text in '', or type k) k] k} kp
+	Plug 'junegunn/vim-after-object' " da= to delete what's after =
+	Plug 'godlygeek/tabular' " ga, or :Tabularize <regex> to align
+	Plug 'tpope/vim-capslock'	" Ctrl+L (insert) to toggle capslock
+	Plug 'easymotion/vim-easymotion'
+	" Plug 'Konfekt/FastFold'
+	"Plug 'junegunn/vim-peekaboo'
+	"Plug 'wellle/context.vim'
+	Plug 'svermeulen/vim-subversive'
+	Plug 'theniceboy/argtextobj.vim'
+	Plug 'rhysd/clever-f.vim'
+	Plug 'AndrewRadev/splitjoin.vim'
+	Plug 'theniceboy/pair-maker.vim'
+	Plug 'theniceboy/vim-move'
+	" Plug 'jeffkreeftmeijer/vim-numbertoggle'
+	Plug 'Yggdroot/indentLine'
+	
+	" For general writing
+	Plug 'junegunn/goyo.vim'
+	"Plug 'reedes/vim-wordy'
+	"Plug 'ron89/thesaurus_query.vim'
+	
+	" Bookmarks
+	" Plug 'MattesGroeger/vim-bookmarks'
+	
+	" Find & Replace
+	Plug 'brooth/far.vim', { 'on': ['F', 'Far', 'Fardo'] }
+	
+	" Documentation
+	"Plug 'KabbAmine/zeavim.vim' " <LEADER>z to find doc
+	
+	" Mini Vim-APP
+	"Plug 'jceb/vim-orgmode'
+	"Plug 'mhinz/vim-startify'
+	Plug 'skywind3000/asynctasks.vim'
+	Plug 'skywind3000/asyncrun.vim'
+	
+	" Vim Applications
+	Plug 'itchyny/calendar.vim'
+	
+	" Other visual enhancement
+	Plug 'luochen1990/rainbow'
+	Plug 'mg979/vim-xtabline'
+	Plug 'ryanoasis/vim-devicons'
+	Plug 'wincent/terminus'
+	
+	" Other useful utilities
+	Plug 'lambdalisue/suda.vim' " do stuff like :sudowrite
+	" Plug 'makerj/vim-pdf'
+	"Plug 'xolox/vim-session'
+	"Plug 'xolox/vim-misc' " vim-session dep
+	
+	" Dependencies
+	" Plug 'MarcWeber/vim-addon-mw-utils'
+	" Plug 'kana/vim-textobj-user'
+	" Plug 'roxma/nvim-yarp'
+	
+	
+	call plug#end()
+	set re=0
+	
+	" experimental
+	set lazyredraw
+	"set regexpengine=1
+	
+	
+	" ===
+	" === Dress up my vim
+	" ===
+	set termguicolors " enable true colors support
+	let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+	"set background=dark
+	"let ayucolor="mirage"
+	"let g:oceanic_next_terminal_bold = 1
+	"let g:oceanic_next_terminal_italic = 1
+	"let g:one_allow_italics = 1
+	
+	"color dracula
+	"color one
+	color deus
+	"color gruvbox
+	"let ayucolor="light"
+	"color ayu
+	"color xcodelighthc
+	"set background=light
+	"set cursorcolumn
+	
+	hi NonText ctermfg=gray guifg=grey10
+	"hi SpecialKey ctermfg=blue guifg=grey70
+	
+	" ===================== Start of Plugin Settings =====================
+	
+	
+	" ===
+	" === eleline.vim
+	" ===
+	let g:airline_powerline_fonts = 0
+	
+	
+	" ==
+	" == GitGutter
+	" ==
+	" let g:gitgutter_signs = 0
+	let g:gitgutter_sign_allow_clobber = 0
+	let g:gitgutter_map_keys = 0
+	let g:gitgutter_override_sign_column_highlight = 0
+	let g:gitgutter_preview_win_floating = 1
+	let g:gitgutter_sign_added = '▎'
+	let g:gitgutter_sign_modified = '░'
+	let g:gitgutter_sign_removed = '▏'
+	let g:gitgutter_sign_removed_first_line = '▔'
+	let g:gitgutter_sign_modified_removed = '▒'
+	" autocmd BufWritePost * GitGutter
+	nnoremap <LEADER>gf :GitGutterFold<CR>
+	nnoremap H :GitGutterPreviewHunk<CR>
+	nnoremap <LEADER>g- :GitGutterPrevHunk<CR>
+518a51b284c6f6bbfd5f43655217d213|file:///home/bohn/.config/nvim/init.vim|220|1|V|vim
+	cnoremap <C-a> <Home>
+b9a3c1766adde39dd897ebe7bcb80c9c|file:///home/bohn/.config/nvim/init.vim|216|11|V|vim
+	stst{}kurst
+ef4e44c43c7666ada50d0e7fe5f1a1fc|file:///home/bohn/test.cc|86|6|V|cpp
+			cout
+				stusttnk
+	
+	
+	#endif
+	
+	
+	
+	    return 0;
+	}
+	
+915b815da25db74212616fc2838aab22|file:///home/bohn/test.cc|86|6|V|cpp
+			cout
+				stusttnk
+5313985566ab77a371ffb2df22fd97b6|file:///home/bohn/.config/ranger/rc.conf|372|13|V|conf
+	map gF cd ~/.sconfig
+ecc33cb82c96793e9420aac8a113b6d5|file:///home/bohn/.config/nvim/plugged/vim-instant-markdown/README.md|116|1|v|markdown
+	   - If you're on OSX and are using zsh, try to add `set shell=bash\ -i` in your
+625c8eb77a0900437f498ff5bff61d14|file:///home/bohn/.config/nvim/init.vim|52|1|V|vim
+	" ===
+	" === Editor behavior
+7c92ee1ad7fb97cdd61b7673c6d244bf|file:///home/bohn/.config/nvim/init.vim|53|1|V|vim
+	" ===
+afa3e7e4a29c17327b76ee0edb9a0a65|file:///home/bohn/.config/nvim/init.vim|53|1|V|vim
+	" === Editor behavior
+48aad297cb61e5167cc93339a9962493|file:///home/bohn/.config/nvim/plugged/vim-instant-markdown/README.md|116|1|V|markdown
+	   - If you're on OSX and are using zsh, try to add `set shell=bash\ -i` in your
+	  `.vimrc` to set interactive bash as the default Vim shell. (See [this
+019ff38d561813d5b30ebc684d9a1d62|file:///home/bohn/.config/nvim/init.vim|55|1|V|vim
+	let g:instant_markdown_autostart = 1
+ea2b2676c28c0db26d39331a336c6b92|file:///home/bohn/.config/nvim/init.vim|56|28|v|vim
+	start
+d856ccb12eae319669d74f9ffcb7acd2|file:///home/bohn/.config/nvim/plugged/vim-instant-markdown/README.md|76|1|v|markdown
+	"let g:instant_markdown_slow = 1
+	"let g:instant_markdown_autostart = 0
+	"let g:instant_markdown_open_to_the_world = 1
+	"let g:instant_markdown_allow_unsafe_content = 1
+	"let g:instant_markdown_allow_external_content = 0
+	"let g:instant_markdown_mathjax = 1
+	"let g:instant_markdown_mermaid = 1
+	"let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
+	"let g:instant_markdown_autoscroll = 0
+	"let g:instant_markdown_port = 8888
+	"let g:instant_markdown_python = 1
+4b1c48ae6c2534f08755d14eef9194f4|file:///home/bohn/.config/nvim/init.vim|55|1|V|vim
+	let g:instant_markdown_autoscroll = 1
+9abb6107a067b357546121d39ee0353f|file:///home/bohn/.config/nvim/init.vim|55|1|V|vim
+	let g:instant_markdown_mathjax = 1
+ff21d7afaa1ec6bed3f886e20a46cbf8|file:///home/bohn/.config/nvim/init.vim|53|1|V|vim
+	let g:instant_markdown_open_to_the_world = 1
+8104f44ec894a711269566dd2b742a5c|file:///home/bohn/.config/nvim/init.vim|64|1|V|vim
+	let g:instant_markdown_python = 1
+19cf44f0905f5586b257512d83f0ffb1|file:///home/bohn/.config/nvim/init.vim|61|1|V|vim
+	let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
+a65cb4b22c035300b06f1f2e35f3e2cb|file:///home/bohn/.config/nvim/init.vim|54|1|V|vim
+	let g:instant_markdown_slow = 1
+ce3f372a94d179db0a781f6d6df6f98c|file:///home/bohn/md.md|4|1|v|markdown
+	<++>
+64cffe0c49e52fdbc8cbe06ed07f7392|file:///home/bohn/.config/nvim/init.vim|53|1|V|vim
+	"let g:instant_markdown_browser = "chromium --new-window"
+3e181e712ce6baef0bc8edb037da5659|file:///home/bohn/.config/nvim/init.vim|55|1|V|vim
+	let g:instant_markdown_browser = "chromium"
+6953d67b31d888bc9524cf45db088656|file:///home/bohn/.config/nvim/init.vim|62|1|V|vim
+	noremap <F7> <ESC>:InstantMarkdownPreview<CR>
+31fde7b05ac8952dacf4af8a704074ec|file:///home/bohn/.config/nvim/init.vim|63|35|v|vim
+	Preview
+05965c1458fcd93a76b8e94dbf5ef7dc|file:///home/bohn/.config/nvim/init.vim|231|11|V|vim
+	inoremap tn <ESC>
+fd62dbfe7f0e9d37a78dafe053f333e3|file:///home/bohn/test.cc|86|3|V|cpp
+			kucftntn
+bdee703c89c64c546a69ae2d4a9671da|file:///home/bohn/test.cc|1|1|v|cpp
+	#include <iostream>
+327a6c4304ad5938eaf0efb6cc3e53dc|file:///home/bohn/test.cc|100|3|v|cpp
+	flag
+85370bddac3936d0059151367fc738f0|file:///home/bohn/test.cc|36|1|V|cpp
+			{
+	
+			}
+0cf31b2c283ce3431794586df7b0996d|file:///home/bohn/test.cc|38|1|V|cpp
+	    
+7701efcb5d3d6d9d1cae9ac38a7c7410|file:///home/bohn/.config/nvim/init.vim|52|1|V|vim
+	"set shell=bash\ -i
+	let g:instant_markdown_browser = "firefox"
+	"let g:instant_markdown_autostart = 0
+	"let g:instant_markdown_open_to_the_world = 1
+	"let g:instant_markdown_allow_unsafe_content = 1
+	let g:instant_markdown_allow_external_content = 0
+	let g:instant_markdown_mathjax = 1
+	let g:instant_markdown_mermaid = 1
+	let g:instant_markdown_autoscroll = 0
+	let g:instant_markdown_port = 8888
+	noremap <F7> <ESC>:InstantMarkdownPreview<CR>
+	noremap <F8> <ESC>:InstantMarkdownStop<CR>
+	
+	
+ee0d16c40173fdfdf2cdd5ec92a4fb60|file:///home/bohn/.config/nvim/init.vim|758|1|V|vim
+	"let g:instant_markdown_autostart = 0
+11b59cbff1b43e8fc3df491b132f9b38|file:///home/bohn/.config/nvim/init.vim|758|1|V|vim
+	"let g:instant_markdown_open_to_the_world = 1
+7a2bb7fea6b89a130cf913a703e032b6|file:///home/bohn/.config/nvim/init.vim|758|1|V|vim
+	"let g:instant_markdown_allow_unsafe_content = 1
+f678f8b8729ef509fc701dc1a10c386a|file:///home/bohn/.config/nvim/init.vim|758|1|V|vim
+	let g:instant_markdown_allow_external_content = 0
+d8194e17a07cf733ebecaa83ff50cd30|file:///home/bohn/.config/nvim/init.vim|760|1|V|vim
+	let g:instant_markdown_autoscroll = 0
+da8b07793f286cb1ebe87e82d1be65a6|file:///home/bohn/.config/nvim/init.vim|765|1|V|vim
+	let g:instant_markdown_slow = 0
+	let g:instant_markdown_autostart = 0
+	" let g:instant_markdown_open_to_the_world = 1
+	" let g:instant_markdown_allow_unsafe_content = 1
+	" let g:instant_markdown_allow_external_content = 0
+	" let g:instant_markdown_mathjax = 1
+	let g:instant_markdown_autoscroll = 1
+16b0dd51605c50dffea9080073459a9d|file:///home/bohn/.config/nvim/init.vim|758|1|V|vim
+	" let g:instant_markdown_autostart = 0
+4beeb8ca51f2604b669bacab8c31fc2c|file:///home/bohn/.config/nvim/init.vim|49|5|V|vim
+	" ===
+	" === for markdown
+	" ===
+7764f626dba0db4138ea2c06af20f072|file:///home/bohn/.config/nvim/init.vim|50|7|v|vim
+	for markdown
+2d725135ec8dc8fda48fab7cbb83764b|file:///home/bohn/.config/nvim/init.vim|52|1|V|vim
+	inoremap ,,a <ESC>
+354400e71b528548e538c456f13588e0|file:///home/bohn/.config/nvim/init.vim|53|14|v|vim
+	<ESC>
+3e303bacbdb8b5c874ce2664c2f98203|file:///home/bohn/.config/nvim/init.vim|159|9|v|vim
+	<LEADER><CR> :nohlsearch<CR>
+	
+	" Adjacent duplicate words
+	noremap <LEADER>dw /\(\<\w\+\>\)\_s*\1
+	
+	" Space to Tab
+	nnoremap <LEADER>tt :
+daf608e1db8aa50a7ac3dc656da96080|file:///home/bohn/.config/nvim/init.vim|896|1|V|vim
+	" ==
+2b174841c48f4e1a3312a4e626dae661|file:///home/bohn/.config/nvim/init.vim|777|1|V|vim
+	{
+		stn
+	}
+3f9f04c2e44b49e94b1190a7087d28be|file:///home/bohn/.config/nvim/init.vim|776|1|V|vim
+	< kucf >
+509b10fe543c7a51d6a0288806522090|file:///home/bohn/.config/ranger/rc.conf|386|22|v|conf
+	wallpapers
