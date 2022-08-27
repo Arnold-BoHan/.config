@@ -1,7 +1,13 @@
 lastupdatecheck: 0
 recentrepos:
-- /home/bohn/.config
+- /home/bohn/LuaStudy
+- /home/bohn/Algorithm
 - /home/bohn/.config/nvim
+- /home/bohn/.config
 startuppopupversion: 5
-customcommandshistory: []
+customcommandshistory:
+- add .
+- git add .
+- git status
+- git commit -m "Add Number in leetcode"
 hidecommandlog: false

@@ -1,5 +1,149 @@
 [
   {
+    "id": "5e55c9ed-9284-43d2-b60e-fb18867f2e0f",
+    "content": [
+      "revisited",
+      "vt. 重游；再访；重临"
+    ],
+    "path": "file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/constructorTest.cpp\t83\t1"
+  },
+  {
+    "id": "830847df-2d95-4194-a415-3ba2b1e0f919",
+    "content": [
+      "endcond",
+      "endcond"
+    ],
+    "path": "file:///usr/include/c%2B%2B/12.1.0/bits/unique_ptr.h\t1052\t8"
+  },
+  {
+    "id": "e9dcc39f-3e56-4a54-85c8-87b65f1cbda8",
+    "content": [
+      "comprehending",
+      "n. 理解"
+    ],
+    "path": "file:///home/bohn/LuaStudy/.git/COMMIT_EDITMSG\t1\t27"
+  },
+  {
+    "id": "06d4129f-79af-4abf-9cc6-225602b4dd01",
+    "content": [
+      "comprehension",
+      "n. 理解力，领悟力；（听力或阅读）理解测试；包括，包含"
+    ],
+    "path": "file:///home/bohn/Algorithm/RecordFile.md\t220\t22"
+  },
+  {
+    "id": "8e9af000-557a-48ce-8e38-1db5e761ed0e",
+    "content": [
+      "compremize",
+      "compremize"
+    ],
+    "path": "file:///home/bohn/Algorithm/RecordFile.md\t220\t22"
+  },
+  {
+    "id": "86cf0965-a6c6-4bfd-8766-e751018b67b0",
+    "content": [
+      "horizonly",
+      "地平线"
+    ],
+    "path": "file:///home/bohn/Algorithm/RecordFile.md\t193\t62"
+  },
+  {
+    "id": "c129e170-ac1f-4fe0-8f87-9cfa6e1dfd50",
+    "content": [
+      "comprehend",
+      "v. 理解，领悟；包括，包含"
+    ],
+    "path": "file:///home/bohn/Algorithm/064_PermuteUnique_47/permuteUnique.cpp\t3\t25"
+  },
+  {
+    "id": "26a4c324-f090-4d0f-b73f-2fc832728291",
+    "content": [
+      "comprehense",
+      "comprehense"
+    ],
+    "path": "file:///home/bohn/Algorithm/064_PermuteUnique_47/permuteUnique.cpp\t3\t25"
+  },
+  {
+    "id": "23f2e1e9-e3e7-4585-9465-2eb949b3353a",
+    "content": [
+      "consequentely",
+      "consequentely"
+    ],
+    "path": "file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_2/7_5.cpp\t10\t1"
+  },
+  {
+    "id": "aa4fe0a6-ab00-47b4-b1a6-060c40ffc4ba",
+    "content": [
+      "conceptually",
+      "adv. 概念上"
+    ],
+    "path": "file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_2/7_5.cpp\t9\t1"
+  },
+  {
+    "id": "915bb6da-824e-4cdd-8cd4-a5a8b41b4850",
+    "content": [
+      "auxiliary",
+      "adj. 辅助的；备用的，后备的"
+    ],
+    "path": "file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_2/7_5.cpp\t8\t1"
+  },
+  {
+    "id": "76dd5b3d-d57c-4f50-bdb9-855df3063b90",
+    "content": [
+      "Recursivly",
+      "递归"
+    ],
+    "path": "file:///home/bohn/Algorithm/051_TrimBST_669/trimBST.cpp\t3\t14"
+  },
+  {
+    "id": "c9f221cc-6be9-464f-b25b-d28acf097fb8",
+    "content": [
+      "properties",
+      "n. <正式>房屋及周围的土地；性质，性能；（舞台或电影的）道具（prop 的旧时用语）（property 的复数）"
+    ],
+    "path": "file:///home/bohn/Algorithm/051_TrimBST_669/trimBST.cpp\t3\t32"
+  },
+  {
+    "id": "2333e291-6c74-49f6-a752-697a5a3a6056",
+    "content": [
+      "recursive",
+      "adj. [数] 递归的；循环的"
+    ],
+    "path": "file:///home/bohn/Algorithm/RecordFile.md\t151\t3"
+  },
+  {
+    "id": "118caa87-30a2-471b-8eaf-cdcce13a8664",
+    "content": [
+      "Mode",
+      "n. 方式，做法；（机器、设备的）运行方式，状态；（衣着、艺术等的）形式，风格；<非正式>（思想、情感或行为的）状态，状况；（音乐的）调式；众数（一组数字中出现次数最多的数）；（逻）（模态命题的）式，形式；（物理）模（式），波型；（模态命题的）式，形式"
+    ],
+    "path": "file:///home/bohn/Algorithm/046_FindMode_501/findMode.cpp\t203\t21"
+  },
+  {
+    "id": "e18fbe35-5719-4bd3-88d0-0f754340ad3d",
+    "content": [
+      "CocCommand",
+      "coc命令"
+    ],
+    "path": "file:///home/bohn/.config/nvim/init.vim\t726\t17"
+  },
+  {
+    "id": "a37f87e5-a45c-47b9-b84d-3fb257c01780",
+    "content": [
+      "hello",
+      "int. 喂，你好（用于问候或打招呼）；喂，你好（打电话时的招呼语）；喂，你好（引起别人注意的招呼语）；<非正式>喂，嘿 (认为别人说了蠢话或分心)；<英，旧>嘿（表示惊讶）"
+    ],
+    "path": "file:///home/bohn/.config/nvim/t.cpp\t15\t17"
+  },
+  {
+    "id": "8bc838fb-aa56-4c9a-af30-a7a49007067f",
+    "content": [
+      "modle",
+      "n.模范；模特儿；模型"
+    ],
+    "path": "file:///home/bohn/threadpool/README.md\t2\t33"
+  },
+  {
     "id": "d42796fe-47c6-4230-a61a-6d35b1eed1e1",
     "content": [
       "alt",

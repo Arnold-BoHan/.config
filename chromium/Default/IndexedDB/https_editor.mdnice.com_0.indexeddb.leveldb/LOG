@@ -1,0 +1,7 @@
+2022/03/30-17:50:49.792 1e59 Reusing MANIFEST /home/bohn/.config/chromium/Default/IndexedDB/https_editor.mdnice.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/03/30-17:50:49.792 1e59 Recovering log #3
+2022/03/30-17:50:49.793 1e59 Reusing old log /home/bohn/.config/chromium/Default/IndexedDB/https_editor.mdnice.com_0.indexeddb.leveldb/000003.log 
+2022/03/30-21:30:43.786 38b7 Level-0 table #5: started
+2022/03/30-21:30:43.789 38b7 Level-0 table #5: 87437 bytes OK
+2022/03/30-21:30:43.790 38b7 Delete type=0 #3
+2022/03/30-21:30:43.790 38b7 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

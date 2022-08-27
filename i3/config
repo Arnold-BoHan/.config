@@ -252,9 +252,9 @@ new_float normal
 hide_edge_borders none
 
 # change borders
-#bindsym $mod+u border none
-#bindsym $mod+y border pixel 1
-#bindsym $mod+n border normal
+# bindsym $mod+u border none
+# bindsym $mod+y border pixel 1
+# bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -296,6 +296,8 @@ bindsym $mod+shift+ctrl+s exec killall screenkey
 
 exec --no-startup-id volumeicon
 bindsym $mod+Ctrl+m exec alacritty -e 'alsamixer'
+bindsym $mod+Ctrl+c exec "setxkbmap us -variant colemak"
+bindsym $mod+Ctrl+u exec "setxkbmap us"
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
@@ -313,8 +315,8 @@ bindsym $mod+p exec pcmanfm
 # bindsym $mod+F3 exec ranger
 #bindsym $mod+d exec gksu pcmanfm
 bindsym $mod+F5 exec alacritty -e 'mocp'
-#bindsym $mod+t exec --no-startup-id pkill compton
-#bindsym $mod+Ctrl+t exec --no-startup-id compton -b
+bindsym $mod+shift+t exec --no-startup-id pkill compton
+bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 #bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 #bindsym Print exec --no-startup-id i3-scrot
 #bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
@@ -322,14 +324,14 @@ bindsym $mod+F5 exec alacritty -e 'mocp'
 exec --no-startup-id shutter
 #bindsym Print exec shutter -f -e -o ~/010_MyArch/Pictures/Screen_Shots/shutter/%Y-%m-%d-%T.png
 #bindsym $mod+shift+Print exec shutter -s -e -o ~/007_MyArch/Pictures/Screen_Shots/shutter/%Y-%m-%d-%T.png
-bindsym $mod+shift+b exec shutter -f -e -o ~/010_MyArch/Pictures/Screen_Shots/shutter/%Y-%m-%d-%T.png
-bindsym $mod+b exec shutter -s -e -o ~/007_MyArch/Pictures/Screen_Shots/shutter/%Y-%m-%d-%T.png
+bindsym $mod+shift+b exec shutter -f -e -o ~/Pictures/shutterPics/%Y-%m-%d-%T.png
+bindsym $mod+b exec shutter -s -e -o ~/Pictures/shutterPics/%Y-%m-%d-%T.png
 #bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 #bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # change wallpaper
-#bindsym $mod+b exec variety -n
-#bindsym $mod+shift+b exec variety -p
+bindsym $mod+shift+l exec variety -n
+bindsym $mod+shift+y exec variety -p
 
 # Switching keyboard layouts
 #bindsym $mod+Shift+k exec xmodmap ~/.Xmodmap-cn
@@ -558,8 +560,8 @@ mode "resize" {
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-#exec --no-startup-id compton -b
-#exec --no-startup-id manjaro-hello
+exec --no-startup-id compton -b
+exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
@@ -570,20 +572,24 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id ff-theme-util
 exec --no-startup-id fix_xcursor
 exec --no-startup-id ~/.config/i3/run-mailsync.sh
-#exec variety
+exec variety
 exec fcitx
 #exec_always --no-startup-id ~/.config/i3/tap-to-click.sh
 exec --no-startup-id ~/.config/i3/inverse-scroll.sh
 #登录时 启用窗口透明
 # exec --no-startup-id compton -b
-# exec_always --no-startup-id compton
+exec_always --no-startup-id compton
 
 exec_always --no-startup-id picom -b
 #登陆时 随机选择壁纸 ，~/Pictures/DesktopBackground 下要放几张图片
 # exec --no-startup-id feh  --randomize --bg-fill 
-exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/mywallpapers/*
+# exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/mywallpapers/*
 # 登陆时启动polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+# Switch keyboard layout automatically
+# exec "setxkbmap us -variant colemak"
+
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:

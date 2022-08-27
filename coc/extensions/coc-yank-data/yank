@@ -1,832 +1,1297 @@
-c6f0e110d2c19bd42c8f2e54e6aad906|file:///home/bohn/.config/nvim/coc-settings.json|269|1|V|json
-	        "ccls": {
-	            "command": "ccls",
-	            "filetypes": [
-	                "c",
-	                "cpp",
-	                "cuda",
-	                "objc",
-	                "objcpp"
-	            ],
-	            "rootPatterns": [
-	                ".ccls",
-	                ".ccls-root",
-	                "compile_commands.json",
-	                ".git/",
-	                ".hg/"
-	            ],
-	            "initializationOptions": {
-	                "cache": {
-	                    "directory": "/tmp/ccls"
-	                }
-	            }
-	        }
-0bf2e939d7cba75683d52272af893e47|file:///home/bohn/.config/nvim/coc-settings.json|269|26|V|json
-	        "clangd": {complete_info()["selected"] != "-1" ? "\" : "\\
-24feb6714dc8105318dece7b06d169cb|file:///home/bohn/.config/nvim/coc-settings.json|269|26|V|json
-	            "    "command": "clangd",complete_info()["selected"] != "-1" ? "\" : "\\
-a3e309aa977955f46cb82254c747a36e|file:///home/bohn/.config/nvim/coc-settings.json|269|26|V|json
-	            "    "rootPatterns": ["compile_flags.txt", "compile_commands.json"],complete_info()["selected"] != "-1" ? "\" : "\\
-06b40f09a73d2215120e18a99158a6d2|file:///home/bohn/.config/nvim/coc-settings.json|269|26|V|json
-	            "    "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]complete_info()["selected"] != "-1" ? "\1" : "\\
-fdb6ad1ed4fad11dfacc770f75569040|file:///home/bohn/.config/nvim/coc-settings.json|269|17|V|json
-	            "  }
-778f2be6d231266dc6a946200f9bb260|file:///home/bohn/.config/nvim/coc-settings.json|269|18|V|json
-	        clangd: {}
-6068c05fc19ecd81f90a7b27fcc5b965|file:///home/bohn/.config/nvim/coc-settings.json|269|9|v|json
-	ccls
-5e406e1e8726bac799a3a18da5a96e13|file:///home/bohn/.config/nvim/coc-settings.json|271|27|V|json
-	            "filetypes": [
-	                "c",
-	                "cpp",
-	                "cuda",
-	                "objc",
-	                "objcpp"
-2873188dbe8f528939e135feada646f0|file:///home/bohn/.config/nvim/coc-settings.json|271|15|V|json
-	            ],
-fce5169347f12f2bf7e7b007568ca0ae|file:///home/bohn/.config/nvim/init.vim|99|1|V|vim
-	xmap kf <Plug>(coc-funcobj-i)
-	xmap af <Plug>(coc-funcobj-a)
-	omap kf <Plug>(coc-funcobj-i)
-	omap af <Plug>(coc-funcobj-a)
-	xmap kc <Plug>(coc-classobj-i)
-	omap kc <Plug>(coc-classobj-i)
-	xmap ac <Plug>(coc-classobj-a)
-	omap ac <Plug>(coc-classobj-a)
-3f35723b600d666ba05bcf109d9dc01e|file:///home/bohn/.config/nvim/init.vim|98|1|V|vim
-	" Text Objects
-8841794c9d568e1e6939db0e9c358bc6|file:///home/bohn/.config/nvim/init.vim|68|1|V|vim
-	inoremap <silent><expr> <TAB>
-		\ pumvisible() ? "\<C-n>" :
-		\ <SID>check_back_space() ? "\<TAB>" :
-		\ coc#refresh()
-	inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-	inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-	function! s:check_back_space() abort
-		let col = col('.') - 1
-		return !col || getline('.')[col - 1]  =~# '\s'
-	endfunction
-	inoremap <silent><expr> <c-space> coc#refresh()
-	inoremap <silent><expr> <c-o> coc#refresh()
-	function! Show_documentation()
-		call CocActionAsync('highlight')
-		if (index(['vim','help'], &filetype) >= 0)
-			execute 'h '.expand('<cword>')
-		else
-			call CocAction('doHover')
-		endif
-	endfunction
-	nnoremap <LEADER>h :call Show_documentation()<CR>
-	" set runtimepath^=~/.config/nvim/coc-extensions/coc-flutter-tools/
-	" let g:coc_node_args = ['--nolazy', '--inspect-brk=6045']
-	" let $NVIM_COC_LOG_LEVEL = 'debug'
-	" let $NVIM_COC_LOG_FILE = '/Users/david/Desktop/log.txt'
+36de8c0d68ad1ef594b9a6f4449a828b|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2830|82|v|lua
+	yParamList
+acc7229b2484423ac3cd9aa1bfc9fa67|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2729|15|v|lua
+	in  
+e0c6dcf890bab84fbe45b141ac16933d|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2729|15|v|lua
+	pairs
+79872e29905d0cbf0d5efcc5c65ff225|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2730|11|v|lua
+	k, v
+039a861c9929905d29ee8b1720127ec0|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2837|28|V|lua
+							print(prettyFuncName.." 函数本次执行失败，参数列表为：")
+dcc31eef0e3291e78cac2a5d97c3d425|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2845|1|V|lua
+							print(prettyFuncName.." 函数本次执行失败，参数列表为空")
+ca0b5fe8ebdb67929e1d7f646a5b98a0|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2840|1|V|lua
+						if #MyParamList > 0 then
+e508204974a7494ddae83931b10d8cdf|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2840|1|V|lua
+							for k = 1, #MyParamList do
+c24377ef72f30467b2c60d14d7cbe1e1|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2840|1|V|lua
+								print(MyParamList[k])
+a01fcbc05f0dea05ba88504156f14110|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2840|1|V|lua
+						else
+d3f38f372e16a62d4823528819509718|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2840|1|V|lua
+						end
+c92afabe3a085fec6362ea3e4a9deff3|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2829|37|V|lua
+						if isThereChannelParam(MyParamList)
+d3410cc7763820d347a6af6971f9cdce|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2831|1|V|lua
+							print("*************************************")
+52c5489569c400b0f3687d2b4977d7bf|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2831|1|V|lua
+							print("*****************************************************")
+d8eaef6f94aa7b7ab879e29b2a0e4d9e|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2834|1|V|lua
+							print("All parameters' info are below")
+33072490eb31c74eff9a6277c8a3a69a|file:///home/bohn/luaUnit3_3/luaunitVersion_2/example_with_luaunit.lua|40|1|V|lua
+				print("##################################")
+b4b9ad5157ef1bb6efac4d9742aefb96|file:///home/bohn/luaUnit3_3/luaunitVersion_2/example_with_luaunit.lua|41|1|V|lua
+				-- print("loadfile is ", loadfile)
+838e1d572b1ffba8f8f8ac77b138f2cb|file:///home/bohn/luaUnit3_3/luaunitVersion_2/example_with_luaunit.lua|62|1|V|lua
+	--[==[
+9e83be5eb7da955a6630fd138d5ce525|file:///home/bohn/luaUnit3_3/luaunitVersion_2/example_with_luaunit.lua|73|91|v|lua
+	difenses
+7cbbc4eadc574e84f2bd079409cc06e5|file:///home/bohn/luaUnit3_3/luaunitVersion_2/example_with_luaunit.lua|53|96|v|lua
+	3-difenses
+c785394f3ee6f86dd84902d7ebbe499a|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2832|13|v|lua
+	"\27[31mred\n"..
+4230ae5f37ed7aa5df82ad6de9b8b18c|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2832|14|v|lua
+	\27[31m
+a763911e60fd87ecf05b47ae47651e1e|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2834|13|v|lua
+	"\27[31m"..
+c2000dd70e9703ebf9c98b5b540d821e|file:///home/bohn/luaUnit3_3/luaunitVersion_2/example_with_luaunit.lua|37|25|v|lua
+	channel)
+3764a208c2275c63bf7e2fd307d4fea1|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2765|1|V|lua
+			-- 拿到一个带 channel 的参数列表
+			--
+a178281ac928709a6a6f3346e858826e|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2763|1|V|lua
+			-- function 
+dcea1967df6526071b41b33e6118b183|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2814|1|V|lua
+						if classInstance then
+						end
+01e19d0f4b377c97cb08783dac683c94|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2804|1|V|lua
+								-- 这里添加执行有参版本的 setUp
+									ok, err = xpcall( function () methodInstance(classInstance, MyParamList[theIndexOfChannelInEveryParamList(methodInstance)]) end, err_handler )
+0b4f65b6de58ed7a80a899a4bd668b69|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2808|69|v|lua
+	MyParamList[theIndexOfChannelInEveryParamList(methodInstance)]
+d85bc303cbb6260e93d7ce62b841ea6e|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2803|1|V|lua
+								if channelFlag then
+47aead90afa0890cd6135e912d0304e2|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2810|1|V|lua
+									-- 这里添加执行空参版本的 setUp，即使有参数其参数也为 nil 
+									ok, err = xpcall( function () methodInstance(classInstance) end, err_handler )
+f1036397432ee1c51496dbd356a82883|file:///home/bohn/luaUnit3_3/luaunitVersion_2/example_with_luaunit.lua|26|1|V|lua
+				if CN == nil or #CN == 0 then
+					print("function without Channel")
+				else
+					print("channel is ", CN)
+e8dc45b2d274c0a181c32301ebd6487f|file:///home/bohn/luaUnit3_3/luaunitVersion_2/example_with_luaunit.lua|26|1|V|lua
+				if CN == nil or #CN == 0 then
+					print("function without Channel")
+				else
+					print("channel is ", CN)
+				end
+3ee31d421f568c21d1c76d030a5f5c6a|file:///home/bohn/luaUnit3_3/luaunitVersion_2/example_with_luaunit.lua|46|4|V|lua
+				print("channel is ", CN)
+3f42178a35a011a1c509f65ec9e2fe73|file:///home/bohn/luaUnit3_3/luaunitVersion_2/example_with_luaunit.lua|26|1|V|lua
+				if CN == nil then
+91d13654549c0ff54266ad6752e4f31c|file:///home/bohn/luaUnit3_3/luaunitVersion_2/example_with_luaunit.lua|42|4|V|lua
+				if CN == nil or #CN == 0 then
+0837b84c6c01539b10a0fee900cb7269|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|3058|12|v|lua
+	isThereChannelParam(TheParamListOfTheMethod)
+a3c400a0e6c1a14920ce351f98a77c43|file:///home/bohn/luaUnit3_3/luaunitVersion_2/testShuffle.lua|5|1|v|lua
 	
-	nnoremap <silent><nowait> <LEADER>d :CocList diagnostics<cr>
-	nmap <silent> <LEADER>- <Plug>(coc-diagnostic-prev)
-	nmap <silent> <LEADER>= <Plug>(coc-diagnostic-next)
-	nnoremap <c-c> :CocCommand<CR>
-	" Useful commands
-	nnoremap <silent> <space>y :<C-u>CocList -A --normal yank<cr>
-	nmap <silent> gd <Plug>(coc-definition)
-	nmap <silent> gD :tab sp<CR><Plug>(coc-definition)
-	nmap <silent> gy <Plug>(coc-type-definition)
-	" nmap <silent> gi <Plug>(coc-implementation)
-	nmap <silent> gr <Plug>(coc-references)
-	nmap <leader>rn <Plug>(coc-rename)
-	nmap tt :CocCommand explorer<CR>
-	" coc-translator
-	nmap ts <Plug>(coc-translator-p)
-	" Remap for do codeAction of selected region
-	function! s:cocActionsOpenFromSelected(type) abort
-	  execute 'CocCommand actions.open ' . a:type
-	endfunction
-	xmap <leader>a  <Plug>(coc-codeaction-selected)
-	nmap <leader>aw  <Plug>(coc-codeaction-selected)w
-	" coctodolist
-	" nnoremap <leader>tn :CocCommand todolist.create<CR>
-	" nnoremap <leader>tl :CocList todolist<CR>
-	" nnoremap <leader>tu :CocCommand todolist.download<CR>:CocCommand todolist.upload<CR>
-	" coc-tasks
-	noremap <silent> <leader>ts :CocList tasks<CR>
-	" coc-snippets
-	imap <C-l> <Plug>(coc-snippets-expand)
-	vmap <C-e> <Plug>(coc-snippets-select)
-	let g:coc_snippet_next = '<c-e>'
-	let g:coc_snippet_prev = '<c-n>'
-	imap <C-e> <Plug>(coc-snippets-expand-jump)
-	let g:snips_author = 'David Chen'
-	autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
-7ede61ce53b7063569a737c5659a7833|file:///home/bohn/.config/nvim/coc-settings.json|271|27|V|json
-	            "filetypes": [
-	                "c",
-	                "cpp",
-	                "cuda",
-	                "objc",
-	                "objcpp"
-	            ],
-401fcaf0de8da968fdf471132ef865eb|file:///home/bohn/.config/nvim/coc-settings.json|272|18|v|json
-	.ccls
-81536f34cd3259207316d0e60abc4846|file:///home/bohn/.config/nvim/coc-settings.json|273|30|V|json
-	                ".ccls-root",
-b6392d58e5299a4d3e7b8c7e43df35f9|file:///home/bohn/.config/nvim/coc-settings.json|274|25|V|json
-	                ".git/",
-	                ".hg/"
-c7bd8b863bbfa4a166b44a6cccfb9e5f|file:///home/bohn/.config/nvim/coc-settings.json|275|14|v|json
-	initializationOptions
-f8e580c92ed1d615001613609eca93eb|file:///home/bohn/.config/nvim/coc-settings.json|276|23|V|json
-	                "cache": {
-	                    "directory": "/tmp/ccls"
-	                }
-84feeb999e7a2beff59fb36dabda046d|file:///home/bohn/.config/nvim/coc-settings.json|226|4|V|json
-			"clangd": {
-				"command": "clangd",
-				"rootPatterns": ["compile_flags.txt", "compile_commands.json"],
-				"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
-			}
-		}
-0faacdaf799c718c56d4f5ad537dc11c|file:///home/bohn/.config/nvim/coc-settings.json|226|1|V|json
-			"clangd": {
-				"command": "clangd",
-				"rootPatterns": ["compile_flags.txt", "compile_commands.json"],
-				"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
-447764b333da4114c34fe3a93f47c2b2|file:///home/bohn/n.cc|12|5|V|cpp
-	    cout << "please input your name"
-f11d0f8ba0d8830a6b74c3d585765a68|file:///home/bohn/n.cc|15|5|V|cpp
-	    set_symmetric_differencecc
-3005a4818ebe316f4a7fa90bcaca4097|file:///home/bohn/.config/nvim/init.vim|5|1|V|vim
-	set runtimepath^=~/.vim runtimepath+=~/.vim/after
-	let &packpath = &runtimepath
-	source ~/.vimrc
-64599d8c6dac97ef66205a33a838fed9|file:///home/bohn/.config/nvim/init.vim|5|1|V|vim
-	set runtimepath^=~/.vim runtimepath+=~/.vim/after
-571951380aca7f0ed0abd5957186ae9d|file:///home/bohn/.config/nvim/init.vim|8|1|V|vim
+	-- function setUp(CN, loadfile)
+	-- 	-- print("channel is ", CN)
+	-- 	-- print("loadfile is ", loadfile)
+	-- 	print("This is SetUp")
+	-- 		-- set up tests
+	-- 	print("----------------------------------")
+	-- 		self.a = 1
+	-- 		self.s = 'hop' 
+	-- 		self.t1 = {1,2,3}
+	-- 		self.t2 = {one=1,two=2,three=3}
+	-- 		self.t3 = {1,2,three=3}
+	-- end
+	--
+	-- function tearDown()
+	-- 	print("----------------------------------")
+	-- 	print("This is TearDown")
+	-- end
+	TestToto = {} --class
 	
-	set runtimepath^=~/.vim runtimepath+=~/.vim/after
-	let &packpath = &runtimepath
-	source ~/.vimrc
-9415eac85158b79acc3dd9deffba3ae1|file:///home/bohn/.config/nvim/init.vim|4|1|V|vim
-	"setruntimepath^=~/.vim runtimepath+=~/.vim/colors/badwolf.vim 
-64424011c840d9e1b97e34eae9547982|file:///home/bohn/n.cc|16|1|V|cpp
-	        df
-d9ac60858fdabe2810f024dc34a290aa|file:///home/bohn/n.cc|15|17|V|cpp
-	    is_arithmetic
-599447ab75fe327e938fbe3fd8866934|file:///home/bohn/.config/nvim/init.vim|114|1|V|vim
-	xmap <leader>a  <Plug>(coc-codeaction-selected)
-	nmap <leader>aw  <Plug>(coc-codeaction-selected)w
-c9e13995a4c2ed42290119b15d083931|file:///home/bohn/.config/nvim/init.vim|109|1|V|vim
-	nmap ts <Plug>(coc-translator-p)
-e0347bca52d850b1e7620aa20db09565|file:///home/bohn/.config/nvim/init.vim|107|1|V|vim
-	nmap tt :CocCommand explorer<CR>
-c4911ff97a2caf523bdee039669f52ec|file:///home/bohn/.config/nvim/init.vim|38|1|V|vim
-	    \ 'coc-clangd',
-6f056f530b3f3930d339655d4569e840|file:///home/bohn/.config/nvim/coc-settings.json|225|1|V|json
-	        "clangd": {
-	                  "command": "clangd",
-	                  "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
-	                  "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
-	  }
-2fee8faacdc8a2fa839daecaa1d7873f|file:///home/bohn/.config/nvim/coc-settings.json|226|7|V|json
-			"clangd": {
-				"command": "clangd",
-				"rootPatterns": ["compile_flags.txt", "compile_commands.json"],
-				"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
-			}
-a06093d92d3e8c80d8d77c8217772c81|file:///home/bohn/hi.cc|6|26|V|cpp
-	    cout << std::cin >> dd;
-7ede1256c6d8a203d2b9ff3a5602483e|file:///home/bohn/hi.cc|10|9|V|cpp
-	        ""
-d4a7596ce84114191fd536ac7e318a2f|file:///home/bohn/hi.cc|6|9|V|cpp
-	    cincomplete_info()["selected"] != "-1" ? "\" : "\\
-	        complete_info()["selected"] != "-1" ? "\ " : "\\
-	        "complete_info()["selected"] != "-1" ? "\"" : "\\
-	        "complete_info()["selected"] != "-1" ? "\"" : "\\
-a1001403e81de4b4f61d0ba9e9c73b3a|file:///home/bohn/.config/nvim/init.vim|73|4|V|vim
-	inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-a62d231a831b5d08e843af7b03ecdc9b|file:///home/bohn/.config/nvim/init.vim|10|1|V|vim
-	complete_info()["selected"] != "-1" ? "\" : "\\
-dbb01209a85c9febb9a6b0a130406c96|file:///home/bohn/.config/nvim/init.vim|10|22|V|vim
-	set g:tagbar_ctags_bin
-6d806ee3c006752a63cd16e8fa561675|file:///home/bohn/.config/nvim/init.vim|93|27|V|vim
-	nnoremap <silent><nowait> <LEADER>d :CocList diagnostics<cr>
-1e16e21d70fae7f586c83546df32d161|file:///home/bohn/n.cc|13|16|V|cpp
-	    int n = str;
-3b92588321a9d14a76a055aca01ccc45|file:///home/bohn/.vimrc|181|1|V|vim
-	nnoremap <leader>vc :edit ~/.vimrc.custom.config<cr>
-0a4f6b3ac459a714bacf5b0e50edd73a|file:///home/bohn/.vimrc|189|34|V|vim
-	nnoremap <leader>H :execute ":help " . expand("<cword>")<cr>
-3f24e4fea70b3b5d013e0c49e8443496|file:///home/bohn/.vimrc|188|1|V|vim
-	" 打开当前光标所在单词的vim帮助文档
-38d04534520ab6c316f49ece2348cd62|file:///home/bohn/hi.cc|2|5|V|cpp
-	#include <string>complete_info()["selected"] != "-1" ? "\" : "\\
-	    "
-f78838b65ce7fc0bb4c8d0d2663a903e|file:///home/bohn/hi.cc|7|5|V|cpp
-	    std::cin >> n;
-45a2ab4506ef750fe7eb4ad38e7a06c5|file:///home/bohn/.zshrc|12|18|v|zsh
-	rangerS
-cdc228f94ce4a45c13eec3dad76ae05d|file:///home/bohn/.vimrc.custom.config|53|23|v|vim
-	chromium
-d6a5c9544eca9b5ce2266d1c34a93222|file:///home/bohn/.vimrc.custom.config|53|23|v|vim
-	firefox
-a3c8b59b45e19122de90712dbba6dbcd|file:///home/bohn/.vimrc.custom.config|17|1|V|vim
-	" markdown
-	 " let system = system('uname -s')
-9654ee541a2cd5f442c7bbf523310b24|file:///home/bohn/.vimrc.custom.config|47|1|V|vim
-	" +--------------+
-	" |   markdown   |
-	" +--------------+
-	"nmap <leader>mdp <Plug>MarkdownPreview
-	"nmap <leader>mds <Plug>MarkdownPreviewStop
-	"nmap <leader>mdt <Plug>MarkdownPreviewToggle
-	let g:mkdp_browser = 'chromium'
-	" vim-zenzoom2
-	let g:goyo_width=150
-	let g:goyo_margin_top = 2
-	let g:goyo_margin_bottom = 2
+	    function TestToto:setUp(CN)
+				if CN == nil then
+					print("function without Channel")
+				else
+					print("channel is ", CN)
+				end
+				print("This is SetUp")
+	        -- set up tests
+	        self.a = 1
+	        self.s = 'hop' 
+	        self.t1 = {1,2,3}
+	        self.t2 = {one=1,two=2,three=3}
+	        self.t3 = {1,2,three=3}
+	    end
 	
-	if has('win16') || has('win32')
-	    au filetype markdown nnoremap <silent> <leader>z :Goyo<cr> | simalt ~x<cr>
-	else 
-	    au filetype markdown nnoremap <silent> <leader>z :Goyo<cr>
-	endif
-d6fe1d0be6347b8ef2427fa629c04485|file:///home/bohn/.config/nvim/init.vim|29|26|v|vim
-	path
-8fb75ae8a77bcdca726783055d3124f5|file:///home/bohn/.config/nvim/init.vim|8|19|V|vim
-	"set termguicolors
-8e9c25654db3594bb373a86a3a5839fa|file:///home/bohn/.vim/plugged/prepare-code/autoload/prepare/prepare.vim|26|1|V|vim
-	    elseif a:suffix == "cpp" || a:suffix == "cc"
-9192c1dd2843e6c2767417e0b7d07027|file:///home/bohn/.vim/plugged/prepare-code/autoload/prepare/prepare.vim|27|12|v|vim
-	a:suffix == "cpp" ||
-98113ccc95cc0ee81b694fa452fff6a6|file:///home/bohn/.config/alacritty/alacritty.yml|107|1|V|yaml
-	    style: Regular
-d2203cb1237cb6460cbad94564e39345|file:///home/bohn/.config/alacritty/alacritty.yml|108|12|v|yaml
-	Regular
-eebca3373ad9ce8d21597e91f482e8de|file:///home/bohn/.config/alacritty/alacritty.yml|96|1|V|yaml
-	  size: 10.0
-aab5a1868b44ff626c284838ac92c94f|file:///home/bohn/.config/alacritty/alacritty.yml|107|5|V|yaml
-	    #
-0bc29d5573e369088ce9a336786f1197|file:///home/bohn/.config/alacritty/alacritty.yml|112|1|V|yaml
-	    # Font family
-	    #
-	    # If the bold family is not specified, it will fall back to the
-	    # value specified for the normal font.
-c15ed346e1dc210639b4d3eaf875145d|file:///home/bohn/.config/alacritty/alacritty.yml|105|1|V|yaml
-	    family: Fira Mono
-612a9494a1663c817cc473c4c6975577|file:///home/bohn/.config/alacritty/aalacritty.yml|108|13|V|yaml
-	    style: Medium
-7fa59be864c3020d0f10cfc0c756302e|file:///home/bohn/.config/alacritty/aalacritty.yml|119|14|V|yaml
-	    style: Bold
-8927b60c84e5339d816d7c1a9f25a17b|file:///home/bohn/.config/alacritty/aalacritty.yml|142|1|V|yaml
-	    style: Bold Italic
-8782eb3888f32680fa917feba3e41322|file:///home/bohn/.config/alacritty/alacritty.yml|105|13|v|yaml
-	Fira Mono
-4045ec8bb7eba018b8110c498b7f3c88|file:///home/bohn/.config/alacritty/alacritty.yml|105|1|V|yaml
-	    family: Monospace
-8dcd69824c6e1a4c67b5c0777689d894|file:///home/bohn/.config/alacritty/alacritty.yml|99|12|V|yaml
-	    size: 17.0
-0ced88956f61aabf365d1407013a2f20|file:///home/bohn/.config/i3/config|459|1|V|conf
-			bindsym Shift+0     gaps outer all set 0
-825a3d98017bab11815ad2817201324c|file:///home/bohn/.config/i3/config|460|11|v|conf
-	Shift
-83e8cd86c669aa925a13480d801389c3|file:///home/bohn/.config/i3/config|460|11|V|conf
-			bindsym 9     gaps outer all set 9
-9f7df318242cd1bc316bda3bd7a022eb|file:///home/bohn/j.cc|6|5|V|cpp
-	    cout << ""
-2402d7ab12000ad3d5852f969a00d23b|file:///home/bohn/.config/i3/config|310|5|v|conf
-	_always --
-1a311528aa97a8338fa8b81cb6bc3dbd|file:///home/bohn/.config/i3/config|446|17|v|conf
-	wlus
-dabe6e597b70e5760826aea1dcc564f7|file:///home/bohn/.config/i3/config|447|17|v|conf
-	minus
-d7d18cfb3a0d8293e2f5d94ea30e04d2|file:///home/bohn/.config/i3/config|458|17|v|conf
-	plus
-0fb18c26411fd265966c34c1b6eff688|file:///home/bohn/.config/i3/config|307|5|v|conf
-	_always 
-a9804bece0a0015cabbf0ccdde255287|file:///home/bohn/.config/i3/config|580|48|v|conf
-	010_MyArch/Pictures/mywallpapers/004.jpg 
-739614e6e102b07fc6aa0a313336e4d0|file:///home/bohn/.config/i3/config|311|21|v|conf
-	google-chrome-stable
-28e3cf9e1f63f8bb4029b8277aba3dea|file:///home/bohn/.config/i3/config|581|49|v|conf
-	~/pictures/mywallpapers/*
-daa1edcf631409e6fe7ed084c5d0a281|file:///home/bohn/.config/i3/config|582|80|v|conf
-	~/图片/*
-d098920ea19788ccfb847a0d1b76198b|file:///home/bohn/test.cc|10|43|V|cpp
-	    // the sigh is same with the former one
-ef036b13f0a8f8ffe3f99f863072650b|file:///home/bohn/test.cc|10|5|V|cpp
-	    int i = -21 % -8;
-a051917a1af36030f12e33d76fab6f6f|file:///home/bohn/test.cc|5|5|V|cpp
-	    std::cout << "Hello world" << std::endl;
-	    std::cout << "nice move yao !" << std::endl;
-	    int n = 3 + 4 * 5;
-0fd020f6afe4995f2d265d9de880cc52|file:///home/bohn/test.cc|5|8|V|cpp
-	    int 
-	    std::cout << "n = "  << n << std::endl;
-64b4d9fc753125ba3045a30852b9ab98|file:///home/bohn/test.cc|16|12|V|cpp
-	    if (true) {
-7bb0edd98f22430a03b67f853e83c2ca|file:///home/bohn/test.cc|16|9|V|cpp
-	        
-ea5a1cbe764918679997181a3ea281d3|file:///home/bohn/test.cc|16|6|V|cpp
-	    }
-ee53f59a15fc80634730d2f0630a7380|file:///home/bohn/test.cc|15|1|V|cpp
-	    std::vector<int> ivec;
-a87deb01c5f539e6bda34829c8ef2368|file:///home/bohn/test.cc|11|5|v|cpp
-	char
-8a94fa28597775ef4110e3672bbac512|file:///home/bohn/test.cc|16|1|V|cpp
-	    std::cout << "i = " << i << std::endl;
-e2942a04780e223b215eb8b663cf5353|file:///home/bohn/test.cc|21|25|v|cpp
-	count
-1862e33e04c1bcd46992e4f4ae3737de|file:///home/bohn/test.cc|23|5|V|cpp
-	    std::cout << "i < n " << c != i < n << std::endl;
-47a3699300120ef2655c1ea699357f98|file:///home/bohn/test.cc|35|7|V|cpp
-	    :w
-3573651478e9a007e05702a2b893352a|file:///home/bohn/test.cc|35|9|V|cpp
-	        k
-1e845f9a239ec2e78e1b9bf5f9ce8287|file:///home/bohn/test.cc|38|1|V|cpp
-	    std::cout << "d = " << d << ", i = " << i << std::endl;
-562ecd4c492a1062c520ef053a248a95|file:///home/bohn/test.cc|57|9|v|cpp
-	{1, 2, 3, 4, 5, 6};
-a0023cebd09af356bdd688a245f2e31e|file:///home/bohn/test.cc|57|9|V|cpp
-	    ivec
-9df22f196a33acd0b372fe502de51211|file:///home/bohn/test.cc|58|11|v|cpp
-	auto
-9e10b4d84af06adb1a897b776a1d296f|file:///home/bohn/test.cc|58|1|V|cpp
-	    while(pbeg != ivec.end() && *pbeg >= 0)
-	        std::cout << *++pbeg << std::endl;
-e96d8afc259593a20838480dfb84400b|file:///home/bohn/test.cc|73|2|v|cpp
-	endif
-8487158c7c479af17c42da40ee1ec5d0|file:///home/bohn/test.cc|71|79|V|cpp
-	        rffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdjdd
-974fc423bd909c2c217e4aadf498c1c0|file:///home/bohn/test.cc|72|1|V|cpp
-	#        rffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdjdd
-	        rffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdjdd
-	        rffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdjdd
-	        rffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdjdd
-	        rffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdjdd
-cb4d6ffb4306afaaef5aaa935baa3bdd|file:///home/bohn/test.cc|74|5|V|cpp
-	    for (auto &j = ivec.begin(); j != ivec.end(); ++j) {
-	        ((j % 2 != 0) ? j = 2 * j : j = j);
-	    }
-8057fec3859ca9df3eb19aad77d68e22|file:///home/bohn/test.cc|56|1|V|cpp
-	    vector<int> ivec{1, 2, 3, 4, 5, 6};
-070c85e98dce828fc6652cce0c81eeb9|file:///home/bohn/test.cc|78|10|v|cpp
-	auto &j = ivec.begin()
-ace58f156cd02a2adccedda6d70390c7|file:///home/bohn/test.cc|78|8|V|cpp
-	    for; ++) {
-15f819e19f251622dd12d434ee0950a8|file:///home/bohn/test.cc|78|1|V|cpp
-	    for (int i = 0; i < count; i++) {
-	        
-	    }
-180a2173241e84ece23011ff401e0a3e|file:///home/bohn/test.cc|80|10|v|cpp
-	; j != ivec.end(); ++j
-d6b75442fd76136c75127baa4c6ab989|file:///home/bohn/test.cc|78|19|V|cpp
-	    for(auto i : )
-	    auto j = ivec.begin();
-b50069dc716031bc6dbc0bd90d44d122|file:///home/bohn/test.cc|79|30|v|cpp
-	 << std::endl
-0e13bfc62b04293f053510d15705c928|file:///home/bohn/test.cc|78|1|V|cpp
-	    for(auto j : ivec)
-	        std::cout << j << " ";
-	    std::cout << std::endl;
-4698850447aa09571776addcb6a2911b|file:///home/bohn/.config/ranger/rifle.conf|88|39|v|cfg
-	EDITOR
-15e1d7870e49b52993071bc133405ef3|file:///home/bohn/.config/ranger/rifle.conf|90|97|v|cfg
-	$EDITOR
-1502d16ce474b2c81a36dd65e76023f1|file:///home/bohn/test.cc|17|1|V|cpp
-	    int n = 5;
-92603cdbc4a87b86c03debfa5b92553e|file:///home/bohn/test.cc|73|1|v|cpp
-	    /* cout << grade < 60 ? "fail" : "pass" ; */
-c76fa212be30e2c128301be540780c1d|file:///home/bohn/.zshrc|18|9|V|zsh
-	alias nv=nvim
-8956e1cda345e2a103fd858ff312b3f0|file:///home/bohn/test.cc|87|1|V|cpp
-	    c
-218283a3ebce43d0b53a12aabe675d46|untitled:1|1|2|V|
-	       cc
-17d488214c68b05b3eb97415a81b6bed|file:///home/bohn/test.cc|88|2|V|cpp
-		 	cout << "nice" << endl;
-617eee7c076698bb3c875e874d1e8ea9|file:///home/bohn/.config/nvim/init.vim|180|1|V|vim
-	noremap <silent> gu gk
-	noremap <silent> ge gj
-	noremap <silent> \v v$h
+			function TestToto:tearDown(CN)
+				if CN == nil then
+					print("function without Channel")
+				else
+					print("channel is ", CN)
+				end
+				print("This is tearDown")
+			end
+	--[==[
+	    function TestToto:test1_withFailure()
+	        -- print( "some stuff test 1" )
+	        lu.assertEquals( self.a , 1 )
+	        -- will fail
+	        lu.assertEquals( self.a , 2 )
+	        lu.assertEquals( self.a , 2 )
+	    end
+	--]==]
 	
-	" U/E keys for 5 times u/e (faster navigation)
-	noremap <silent> U 5k
-	noremap <silent> E 5j
+	    function TestToto:test2_withFailure(start, CN, loadfile)
+	    -- function TestToSuiteto:test2_withFailure(index)
+	        -- print( "some stuff test 2" )
+					print("---------------------------------------------------TestToto:test2_withFailure three tri-dimensional param" )
+					print("channel", CN)
+					print("loadfile", loadfile)
+	        lu.assertEquals( self.a , 1 )
+	        lu.assertEquals( self.s , 'hop' )
+	        -- will fail
+	        lu.assertEquals( self.s , 'bof' )
+	        lu.assertEquals( self.s , 'bof' )
+	    end
+	---[==[
+	    function TestToto:test3()
+	        -- print( "some stuff test 3" )
+					print("---------------------------------------------------TestToto:test3 No param")
+	        lu.assertEquals( self.a , 1 )
+	        lu.assertEquals( self.s , 'hop' )
+	        lu.assertEquals( type(self.a), 'number' )
+	    end
 	
-	" N key: go to the start of the line
-	noremap <silent> N 0
-	" I key: go to the end of the line
-	noremap <silent> I $
+	    function TestToto:test4(loadfile, start)
+	        -- print( "some stuff test 4" )
+					print("---------------------------------------------------TestToto:test4 with two tri-dimensional param")
+					print("loadfile is ", loadfile)
+					print("start is ", start)
+	        lu.assertNotEquals( self.a , 2 )
+	    end
+	--]==]
 	
-	" Faster in-line navigation
-	noremap W 5w
-	noremap B 5b
+	--[==[
+	    function TestToto:test5()
+	        -- print( "some stuff test 5" )
+	        lu.assertEvalToTrue( self.a )
+	        lu.assertEvalToFalse( self.a ) -- will trigger the failure
+	    end
 	
-	" set h (same as n, cursor left) to 'end of word'
-	noremap h e
+	    function TestToto:test6()
+	        -- print( "some stuff test 6" )
+	        lu.assertTrue( true )
+	        lu.assertFalse( false )
+	        lu.assertEvalToFalse( nil )
+	        lu.assertFalse( nil ) -- trigger the failure assertFalse is strict
+	    end
 	
-	" Ctrl + U or E will move up/down the view port without moving the cursor
-	noremap <C-U> 5<C-y>
-	noremap <C-E> 5<C-e>
+	    function TestToto:test7()
+	        -- assertEquals( {1,2}, self.t1 )
+	        -- assertEquals( {1,2}, self.t2 )
+	        lu.assertEquals( {1,2}, self.t3 )
+	    end
+	
+	    function TestToto:test8a()
+	        -- failure occurs in a submethod
+	        self:funcWithError()
+	    end
+	
+	    function TestToto:test8b()
+	        -- failure occurs in a submethod
+	        self:funcWithFuncWithError()
+	    end
+	
+	    function TestToto:funcWithFuncWithError()
+	        self:funcWithError()
+	    end
+	
+	    function TestToto:funcWithError()
+	        error('Bouhouhoum error!')
+	    end
+			--]==]
+	
+	---[===[
+	-- class TestTiti
+	TestTiti = {} --class
+	    function TestTiti:setUp()
+	        -- set up tests
+					print("TestTiti : SetUp")
+	        self.a = 1
+	        self.s = 'hop' 
+	        -- print( 'TestTiti:setUp' )
+	    end
+	
+	    function TestTiti:tearDown()
+	        -- some tearDown() code if necessary
+	        print( 'TestTiti:tearDown' )
+	    end
+	
+	    function TestTiti:test1_withFailure(nice, day)
+	        -- print( "some stuff test 1" )
+					print("---------------------------------------------------TestTiti:test1_withFailure")
+					print("nice : ", nice)
+					print("day : ", day)
+					-- print("channel : ", CN)
+	        lu.assertEquals( self.a , 1 )
+	        -- will fail
+	        lu.assertEquals( self.a , 2 )
+	        lu.assertEquals( self.a , 2 )
+	    end
+	
+			--[===[
+	    function TestTiti:test2_withFailure()
+	        -- print( "some stuff test 2" )
+	        lu.assertEquals( self.a , 1 )
+	        lu.assertEquals( self.s , 'hop' )
+	        -- will fail
+	        lu.assertEquals( self.s , 'bof' )
+	        lu.assertEquals( self.s , 'bof' )
+	    end
+	
+	    function TestTiti:test3()
+	        -- print( "some stuff test 3" )
+	        lu.assertEquals( self.a , 1 )
+	        lu.assertEquals( self.s , 'hop' )
+	    end
+	-- class TestTiti
+	
+	--]===]
+	
+	--[===[
+	-- simple test functions that were written previously can be integrated
+	-- in luaunit too
+	function test1_withFailure()
+		print("This is Test1_withFailure.")
+	    assert( 1 == 1)
+	    -- will fail
+	    assert( 1 == 2)
+	end
+	
+	function test2_withFailure()
+		print("This is Test2_withFailure.")
+	    assert( 'a' == 'a')
+	    -- will fail
+	    assert( 'a' == 'b')
+	end
+	
+	function test3()
+		-- print("This is Test3")
+			-- print("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb")
+			-- print(index)
+	    assert( 1 == 1)
+	    assert( 'a' == 'a')
+	end
+	--]===]
 	
 	
+8931504b51c1f668cffc45d8a83ea3aa|file:///home/bohn/luaUnit3_3/luaunitVersion_2/testShuffle.lua|7|1|V|lua
+		function tb:Test_aa()
+			print("Nancy")
+		end
+53dad3a3f62b5021afa48621cc359a59|file:///home/bohn/luaUnit3_3/luaunitVersion_2/testShuffle.lua|13|1|V|lua
+		function tb:Test_cc()
+			print("Nancy")
+		end
+a33b73f30cde1640b9ac3ec98c7c2831|file:///home/bohn/luaUnit3_3/luaunitVersion_2/testShuffle.lua|11|10|v|lua
+	Nancy
+b35028285a24ef07199750793c54c11c|file:///home/bohn/luaUnit3_3/luaunitVersion_2/testShuffle.lua|6|1|v|lua
+	TestShuffle 
+09641203cb2e301617092addab7ee3f3|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2839|30|v|lua
+	 函数本次执行失败, 参数包含 channel 
+d6528dd85097def9eb84b846229cef80|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2839|13|v|lua
+	prettyFuncName..
+0ded162eb253b3a9d29aec38517fca09|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2840|1|V|lua
+							table.insert(err, prettyFuncName.." 函数本次执行失败, 参数包含 channel ")
+4f25a0dc333b911db2089793de9f1af6|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2841|25|v|lua
+	prettyFuncName.." 函数本次执行失败, 参数包含 channel "
+95d36dfda37ecde0b191397eb074c664|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2512|1|v|lua
+	                {'            <error type="', xmlEscape(self.msg), '">\n',
+	                 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+	                 ']]></error>\n'}
+599dcce2998a6b40b1e38e8c6006cb0a|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2517|38|v|lua
+	type
+d4832c3120b1e0e5f9dfede8b9914af1|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2517|61|v|lua
+	xmlEscape(self.msg)
+6f7f0f00dc4adda44634c7fcd856b0ce|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2517|74|v|lua
+	self.paramInfoOfTheTestCase
+cfffca05c4a018bf9c35bf0373763567|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2515|1|V|lua
+									 and 
+									 table.concat(
+	                {'            <error params哈哈哈哈="', table.unpack(self.paramInfoOfTheTestCase), '">\n',
+	                 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+	                 ']]></error>\n'})
+3ee28fe1a60c95b89d29317f122c7021|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2524|24|v|lua
+	failure
+cb5e100e5a9a3e7f6d1fd97512215282|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2527|32|v|lua
+	error
+590f53e8699817c6fa498cc11a4cbe63|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2855|18|v|lua
+	self
+fab0ea77f05debb2a3ac22360ac9187e|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2855|1|V|lua
+							NodeStatus.paramInfoOfTheTestCase = MyParamList
+5668cec40b4b9794ebc2d19896e01dee|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2855|1|V|lua
+							NodeStatus.paramInfoOfTheTestCase = {}
+930a6b92432e335ef41a165a0312f966|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2522|13|v|lua
+	"111111111111111111111111111111111111111111111"
+10e4c44a37d4afc154b90154cfe23900|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2522|1|V|lua
+							print("111111111111111111111111111111111111111111111")
+bfbab9fc4467f54e04c95affde255dea|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2530|1|V|lua
+									 table.concat(
+	                {'            <failure params哈哈哈哈="', table.unpack(self.paramInfoOfTheTestCase), '">\n',
+	                 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+	                 ']]></failure>\n'})
+21ffce5b8a6cc8cc6a41448dd69623c9|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2862|88|v|lua
+	params
+b0e8ee07a0c397c992eb57fd084de4e5|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2862|88|v|lua
+	哈哈哈哈
+6b93510eb8678f50394d2f2f4d44b115|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2861|1|V|lua
+									 table.concat(
+	                {'            <failure 函数本次执行失败, 参数包含 channel, ParamInfo ="', table.unpack(self.paramInfoOfTheTestCase), '">\n',
+	                 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+	                 ']]></failure>\n'})
+8e1870d53b27497252904f43d92e9b5f|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2873|1|V|lua
+									 table.concat(
+	                {'            <failure 函数本次执行失败, 222222参数不包含 channel, ParamInfo ="', table.unpack(self.paramInfoOfTheTestCase), '">\n',
+	                 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+	                 ']]></failure>\n'})
+353d838130a49624b85d775fcfe3054a|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2880|13|v|lua
+	prettyFuncName.." 函数本次执行失败，参数列表为空"
+3a9fb47744acfed069176324e839e31a|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2884|66|v|lua
+	222222参数不包含 channel, ParamInfo
+021c8df9aee4435ff73bb18ef2203f2c|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2884|90|v|lua
+	table.unpack(self.paramInfoOfTheTestCase), '
+00cf8275df2921cbf74ac1f21f11a65b|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2862|103|v|lua
+	table.unpack
+aab9e1de16f38176f86d7a92ba337a8d|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2874|112|v|lua
+	table
+3929225d0814f26d76505770fdaee955|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2874|122|v|lua
+	paramInfoOfTheTestCase
+99938282f04071859941e18f16efcf42|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2517|61|v|lua
+	select
+08cd9f9fa76096596d7a2a5a27eafa81|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2523|7|V|lua
+							print(k, self.paramInfoOfTheTestCase[k])
+02f15d8c04672045898fd38752859465|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2532|63|v|lua
+	string.format(self.paramInfoOfTheTestCase, ...)
+c87c763ed2ab317791a1a00a242410a0|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2522|1|V|lua
+						myStr = " "
+						for k = 1, #self.paramInfoOfTheTestCase do
+							myStr = myStr.."  "self.paramInfoOfTheTestCase[k].."  "
+						end
+4910f848d3e67ba895ef3ee8159cf780|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2521|61|v|lua
+	string.format(self.paramInfoOfTheTestCase)
+253b31d73db348fe00c090b468643554|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|1997|14|v|lua
+	JUnitOutput:endSuite
+ce61ec807a3c641dc228813ebcb3f2b3|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|3179|1|V|lua
+	        self:endSuite()
+e30a7e7e0a46d6bd897a29327c48eb5a|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|3168|1|V|lua
+										self:endSuite()
+9cc49ff7cdca6cb5a0646f1e962943a4|file:///home/bohn/Test/prob.cpp|10|16|v|cpp
+	sentences
+deb7bf21a7073c59ee4dc327ce0e87a0|file:///home/bohn/Test/prob.cpp|2|1|V|cpp
+	#include 
+952a7c064cbe20ccdd261eec652be864|file:///home/bohn/Test/prob.cpp|12|1|V|cpp
+		std::cout << "The result is " << foo(3,5) << std::endl;
+4e5667f7f3f4606f178ee5537cdcef86|file:///home/bohn/Test/prob.cpp|16|3|V|cpp
+			std::cout <<  << std::endl;
+4699cadce47730764c9af77a5f58a169|file:///home/bohn/Test/prob.cpp|16|2|V|cpp
+			std::cout << std::endl;
+f768a4b1a31b9e3a759b10a13c1e97e6|file:///home/bohn/Test/prob.cpp|17|6|v|cpp
+	int x
+c3d1822661d91e6920baa9f6b6b17fd2|file:///home/bohn/Test/prob.cpp|17|9|v|cpp
+	int y
+44db94296ddd0143bdc6ddce33f84900|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2864|1|V|lua
+							table.insert (NodeStatus.paramInfoOfTheTestCase, MyParamList)
+c42e9b088a3e7bb6719d91ba0edc5835|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2875|7|V|lua
+							NodeStatus.paramInfoOfTheTestCase = {}
+							NodeStatus.paramInfoOfTheTestCase = MyParamList
+f5b3181495af18a68e4b2976a68ded1f|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2525|16|V|lua
+						-- print("111111111111111111111111111111111111111111111")
+467e35680352f1ce94800e8c90e96490|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2537|9|V|lua
+									 end
+055141e630a6b42687b7726504343f13|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2534|1|V|lua
+											{'            <failure type="', xmlEscape(self.msg), '">\n',
+											 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+											 ']]></failure>\n'})
+2c8ca4c1522658990cbb0fc323b228e8|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2533|6|V|lua
+									if myStr == "" then
+c28a9ae5f5f92e58c216faef126472e7|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2533|1|V|lua
+	            return table.concat(
+82a27c298e896b068c04ae4b831e713b|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2516|1|V|lua
+	            return table.concat(
+	                {'            <error type="', xmlEscape(self.msg), '">\n',
+	                 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+	                 ']]></error>\n'}) 
+55b1fed982a3946a58da22370e58b891|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2532|1|V|lua
+							myStr = ""
+							if #self.paramInfoOfTheTestCase > 0 then
+									for k = 1, #self.paramInfoOfTheTestCase[1] do
+										myStr = myStr.."  "..self.paramInfoOfTheTestCase[k].."  "
+									end
+									table.remove(self.paramInfoOfTheTestCase, 1)
+							end
+67b3833d4f82d94cf7d8b7b0228a5710|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2518|7|V|lua
+							myStr = " "
+							for k = 1, #self.paramInfoOfTheTestCase do
+								myStr = myStr.."  "..self.paramInfoOfTheTestCase[k].."  "
+							end
+d7bda6b5c5906915e7355e42b0656c2d|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2883|21|v|lua
+	NodeStatus.paramInfoOfTheTestCase
+dcb84063c8b8176627f4f2bc894bcd20|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2538|1|V|lua
+												for i = 1, #self.paramInfoOfTheTestCase[k][i] do
+														myStr = myStr.."  "..self.paramInfoOfTheTestCase[k][i].."  "
+												end
+615578ef3280c7d94e5d113808b89185|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2517|14|V|lua
+										myStr = myStr.."  "..self.paramInfoOfTheTestCase[k].."  "
+9bc46ce1dc2254da46acf00cb0b6cbed|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2541|8|V|lua
+												for i = 1, #self.paramInfoOfTheTestCase[1][i] do
+b6d89e9bf3dd15207943c87927ee815e|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2542|8|V|lua
+												end
+b8484506138c34f118b65b5a546e4541|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2542|8|V|lua
+												break
+3df36285aca96c6b1d427249788839a2|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2540|1|V|lua
+									for k = 1, #self.paramInfoOfTheTestCase[1] do
+												myStr = myStr.."  "..self.paramInfoOfTheTestCase[1][k].."  "
+									end
+daf59bbfee11bfa2ab1720cc3b327de2|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2516|9|V|lua
+									for k = 1, #self.paramInfoOfTheTestCase[1] do
+												for i = 1, #self.paramInfoOfTheTestCase[k][i] do
+														myStr = myStr.."  "..self.paramInfoOfTheTestCase[k][i].."  "
+												end
+												break
+									end
+9e59b09d00cadac28448bba80572e002|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2530|39|v|lua
+	NiceXmlInfoMan
+6e483460a68a394d8a14e028eef12ae1|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2554|52|v|lua
+	InfoMan
+4d0aaa8cc362901e4e79e827b5b57a4d|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2884|25|V|lua
+									--  table.concat(
+	                -- {'            <failure 函数本次执行失败, 参数包含 channel, ParamInfo ="', select(1, MyParamList), '">\n',
+	                --  '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+	                --  ']]></failure>\n'})
+e5474a40536ad54a5c40f4e65044ad18|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2891|25|V|lua
+									--  table.concat(
+	                -- {'            <failure 函数本次执行失败, 222222参数不包含 channel, ParamInfo ="', select(1, MyParamList), '">\n',
+	                --  '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+	                --  ']]></failure>\n'})
+565455d27d0496fa2d02582a4141bfba|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2878|27|V|lua
+							table.insert(err, prettyFuncName.." 函数本次执行失败, 参数包含 channel ")
+							table.insert(err, MyParamList[theIndexOfChannelInEveryParamList(methodInstance)])
+6a55401c1f93ab3c6ca5f8fa3acae3c9|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2531|56|v|lua
+	self.stackTrace
+a5e255eddd7867de9fb70b15119e0386|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2880|13|v|lua
+	"The channel ID is \27[32m"
+e6b5fc1f1a829a54865548ed7c13052d|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2878|1|V|lua
+							table.insert(self.stackTrace, "++++++: "..prettyFuncName.." 函数本次执行失败, 参数包含 channel ")
+							table.insert(self.stackTrace, "The channel ID is "..MyParamList[theIndexOfChannelInEveryParamList(methodInstance)])
+36702032bc7044f75b3c1b858f277cab|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2888|1|V|lua
+							print(prettyFuncName.." 函数本次执行失败，参数不包含 channel ")
+f7531e2d0ea27233ce00b5f01c5bf335|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2889|7|v|lua
+	print
+57685d5cb04d4f8245627d700a6ddc56|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2900|7|V|lua
+									--  table.concat(
+	                -- {'            <failure 函数本次执行失败, 参数列表为空" ">\n',
+	                --  '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+	                --  ']]></failure>\n'})
+0ab89e81f59af39a70462d7e05aa1d55|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2897|20|v|lua
+	prettyFuncName
+93a821fb5eaf0e9700d95200ed8a90e6|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2892|21|v|lua
+	NodeStatus
+0d3a619509590e6a8bedc9d5d51910b7|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|3081|1|V|lua
+					NodeStatus.paramInfoOfTheTestCase = {}
+efc46705cfabb5f5764f5285469f91b8|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2889|1|V|lua
+							print(NodeStatus.stackTrace)
+349ae39db7bf90e1f225b22504af4fe6|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2885|1|V|lua
+							print("*****************************************************".."\27[m")
+975722a94b97d6db9859503b9bc48bbf|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2902|7|V|lua
+							print("*****************************************************".."\27[m")
+							print(NodeStatus.stackTrace)
+c5c618b10f9b522cee1ecdf18f6ddadc|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2902|7|V|lua
+							print("*****************************************************".."\27[m")
+							print(NodeStatus.stackTrace)
+							print("*****************************************************".."\27[m")
+15b1c82ef10040bef5884c393d5b4fba|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2892|7|V|lua
+							-- print("*****************************************************".."\27[m")
+f3388477dc6ba5f9443258088d999d56|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2881|7|V|lua
+							--
+dd6855bafb493ebde737eebc11eec10d|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2881|1|V|lua
+							NodeStatus.stackTrace = NodeStatus.." 函数本次执行失败, 参数包含 channel "
+782b06305685f511acb112cba8323151|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2888|33|v|lua
+	 函数本次执行失败，参数不包含 channel 
+ccb1bb3c5691fd1855a040e7c73d8d21|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2890|1|V|lua
+							NodeStatus.stackTrace = NodeStatus.." 函数本次执行失败, 参数不包含 channel "
+7a6182a7247c65f72809a11011f0adf9|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2899|44|v|lua
+	 函数本次执行失败, 参数不包含 channel 
+434b3cf72f5806f5f28464644672aa0f|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2897|33|v|lua
+	 函数本次执行失败，参数列表为空
+fcd4e36fd80f450979495718dbddaacf|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2899|18|v|lua
+	stackTrace
+a99ac28610ab268acb31c24188bc4192|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2899|7|v|lua
+	NodeStatus.theErrorChannelID =
+0260bfadc2e929bb5d4f5f0ab0cf75f5|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2547|14|V|lua
+											 and
+											 table.concat(
+											{'            <failure ChannelInfo ="', xmlEscape(self.msg), '">\n',
+											 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+											 ']]></failure>\n'})
+4eac9e87fac849a11c67fb502d136871|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2550|12|V|lua
+											 and
+09095e22f8a5ef25439b419ce3ce1211|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2548|17|v|lua
+	table.concat(
+													{'            <failure ChannelInfo ="', self.theErrorChannelID, '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n'})
+													 and
 	
-	source $XDG_CONFIG_HOME/nvim/cursor.vim
+3b23138271312cc9440919e0d93f9be4|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2558|1|v|lua
+													{'            <failure ChannelInfo ="', self.theErrorChannelID, '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n'}
+0f5eba8922e5cb4064e8359c91ad9c69|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2897|38|v|lua
+	" 函数本次执行失败, 参数包含 channel , 且这个 channelID is "
+4d669fddab8b24a7894b5c6125f7ecae|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2897|38|v|lua
+	" 函数本次执行失败, 参数包含 channel , 且这个 channelID is "..MyParamList[theIndexOfChannelInEveryParamList(methodInstance)]
+ba473907c2b91fe7e642e5e59177a697|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2897|164|V|lua
+							NodeStatus.theErrorChannelID = " 函数本次执行失败, 参数包含 channel , 且这个 channelID is "..MyParamList[theIndexOfChannelInEveryParamList(methodInstance)]
+440a3249a474e800e678f740aae8ea5b|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2907|38|v|lua
+	" 函数本次执行失败, 参数不包含 channel "
+30ce8588a02f642172783fa337ece2c6|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2897|7|V|lua
+							NodeStatus.theErrorChannelID, channelErrorInfo
+e0bf5017bfff9649934c32821e5208b5|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2897|1|V|lua
+							table.insert( NodeStatus.theErrorChannelID, channelErrorInfo)
+b041391b4e699c377e5eca0ec6426144|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2908|7|V|lua
+							NodeStatus.theErrorChannelID = channelErrorInfo
+3d958f6c53021cb4ba80e602e9757ab4|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2916|7|v|lua
+	NodeStatus.theErrorChannelID
+900f8afbf20136af27967a099994484f|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2511|1|V|lua
+							myStr = ""
+							if #self.paramInfoOfTheTestCase > 0 then
+									for k = 1, #self.paramInfoOfTheTestCase[1] do
+												myStr = myStr.."  "..self.paramInfoOfTheTestCase[1][k].."  "
+									end
+									table.remove(self.paramInfoOfTheTestCase, 1)
+							end
+73ae24f290872dc5a54a3a4b1b7fd56b|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2518|7|v|lua
+	myStr
+770fcdb58fed1a0f9907fc7108f1bea7|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2520|26|V|lua
+									for k = 1, #self.paramInfoOfTheTestCase[1] do
+feb242a40ade2f1d06c2953bc5c845a3|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2520|9|V|lua
+									myStr = myStr.."  "..self.paramInfoOfTheTestCase[1][k].."  "
+7b0ddb359f890a88852d9aae68db5e17|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2521|27|v|lua
+	paramInfoOfTheTest
+0819eb30cc2cd18cf6b02042458c5da1|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2521|46|v|lua
+	Case
+f38f385bbb9d02abb6711f063f6f9797|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2518|1|V|lua
+							aboutChannel = ""
+							if #self.theErrorChannelID > 0 then
+									aboutChannel = self.theErrorChannelID[1]
+									table.remove(self.theErrorChannelID, 1)
+							end
+7e8ceb58d43829213269c34914d5dafc|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2564|53|v|lua
+	self.theErrorChannelID
+d1e726154968a91a60c808506d08a39c|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2564|53|v|lua
+	aboutChannel
+624665cfae642fb0bb34a8d28bd4d72c|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2562|1|V|lua
+													 and
+													 table.concat(
+													{'            <failure ChannelInfo ="', aboutChannel, '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n'})
+34f61c0ee27550d2172a832be56bea81|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2533|1|v|lua
+													{'            <failure ChannelInfo ="', aboutChannel, '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n'}
+064eb5d7603c6de44658cd4d6b614997|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2562|1|V|lua
+							print("___________________________________________________________")
+7532ef7b6c85a916829657dabd8e5eb4|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2562|1|V|lua
+							print("___________________________________________________________")
+							print("aboutChannel is ", aboutChannel)
+							print("___________________________________________________________")
+f70a91e34bff5c0b83aba0cca38148b8|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2579|17|v|lua
+	table.concat(
+													{'            <failure Channel Erro Info ="', aboutChannel, '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n'})
+													and
 	
-	"If you use Qwerty keyboard, uncomment the next line.
-	"source $XDG_CONFIG_HOME/nvim/cursor_for_qwerty.vim
+59897331b322ed12de285aaa5f76335f|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2593|12|V|lua
+													and
+1c444d4ceee753ae0a44319538f898fc|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2588|1|V|lua
+													and
+													table.concat(
+													{'            <failure Channel Erro Info ="', aboutChannel, '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n'})
+b8a4f63bc49b07227de00b569530cbe4|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2537|16|v|lua
+	table.concat(
+													{'            <failure ChannelInfo ="', aboutChannel, '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n'})
+													and
 	
-	" ===
-	" === Insert Mode Cursor Movement
-	" ===
-	inoremap <C-a> <ESC>A
+ffa28412cd1c5825d112d112663cfabf|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2527|15|v|lua
+	table.concat(
+													{'            <failure ChannelInfo ="', aboutChannel, '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n'})
+4f4750dfd6f55bb7e6742e772e0ef8a5|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2523|16|V|lua
+							-- print("___________________________________________________________")
+							-- print("aboutChannel is ", aboutChannel)
+							-- print("___________________________________________________________")
+8c3115a27d97c349eae15f8ca1bfc6cc|file:///home/bohn/luaUnit3_3/luaunitVersion_2/example_with_luaunit.lua|156|1|V|lua
+			--[===[
+0dab8fbbc8a0407f9112ff74f474b804|file:///home/bohn/luaUnit3_3/luaunitVersion_2/example_with_luaunit.lua|159|1|V|lua
+					print("==================================================================")
+402d0c904af1d72d2ad7bcfc4053e541|file:///home/bohn/luaUnit3_3/luaunitVersion_2/example_with_luaunit.lua|146|1|V|lua
+					print("---------------------------------------------------TestTiti:test1_withFailure")
+b868cfe80578e103c7e17a1b77ef73ca|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|3145|59|V|lua
+										print("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
+60b88e0d5cff92df61158f0572c37953|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|3146|31|V|lua
+									Traversal(TheChannelIDs)
+c5b80cde4bc9b417e96eecc5e66c03b0|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|3205|16|v|lua
+	(TheChannelIDs ~= nil and #TheChannelIDs > 0) and 
+2c1805e4e3ed7ec7a91d4840405871c7|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|3205|17|v|lua
+	TheParamListOfTheMethod ~= nil and #TheParamListOfTheMethod == 1 and 
+5a9d30a013a6841862456d7d097f4423|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|3205|44|v|lua
+	"CN"
+b58fcbf329ef8689641bc5bf2cead13a|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|3205|35|v|lua
+	and TheParamListOfTheMethod[1] == "CN"
+eecf9c42e6d401a0943bf2dd6b0aab0d|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|3164|13|v|lua
+	TheChannelIDs ~= nil and 
+84f7966f293f06c9789854240892413f|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|3164|38|v|lua
+	 TheParamListOfTheMethod ~= nil and 
+83b14e5bdbe399d6116d13e0972d8fda|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|3186|17|v|lua
+	TheChannelIDs == nil or 
+d7454c2cb6286433534a23957001557a|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|3186|43|v|lua
+	TheParamListOfTheMethod ~= nil and 
+9312f6a654e4b3c20c2f114e7c41a6b8|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2518|1|V|lua
+							print("=====================================================")
+							print(myStr)
+c3ba72418eaaa6789d4bc5988730261a|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2589|14|v|lua
+	'            <failure Channel Erro Info ="', aboutChannel, '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n'
+4857668746230397c10f94d1246cab76|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2576|14|v|lua
+	'            <failure ChannelInfo ="', aboutChannel, '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n'
+22fa75868088fca122d0d7d8ddc00f0b|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2594|14|v|lua
+	'            <failure paramsInfo NiceXml ="', myStr, '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n'
+ddca58d17114543b16988672be010705|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2593|13|V|lua
+													--  and 
+													--  table.concat(
+													-- {'            <failure paramsInfo NiceXml ="', myStr, '">\n',
+													--  '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													--  ']]></failure>\n'})
+													-- and
+													-- table.concat(
+													-- {'            <failure Channel Erro Info ="', aboutChannel, '">\n',
+													--  '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													--  ']]></failure>\n'})
+daa5d6f9d565407a4908bf55686d674d|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2576|12|V|lua
+													--  and
+													--  table.concat(
+													-- {'            <failure ChannelInfo ="', aboutChannel, '">\n',
+													--  '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													--  ']]></failure>\n'})
+e234372d595967ef9415a7c190742e0f|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2576|1|V|lua
+									return  table.concat(
+													{'            <failure type="', xmlEscape(self.msg), '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n',--})
+												   '            <failure Channel Erro Info ="', aboutChannel, '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n', 
+													 '            <failure paramsInfo NiceXml ="', myStr, '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n'
+												 })
+8985a98940b754d3cbee2359825eb5f4|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2566|1|V|lua
+							if myStr == "" then
+									return table.concat(
+													{'            <failure type="', xmlEscape(self.msg), '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n', 
+	  											 '            <failure Channel Error Info ChannelInfo ="', aboutChannel, '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n'
+												 })
+							elseif #myStr > 0 then
+									return  table.concat(
+													{'            <failure type="', xmlEscape(self.msg), '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n',--})
+												   '            <failure Channel Error Info ="', aboutChannel, '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n', 
+													 '            <failure paramsInfo NiceXml ="', myStr, '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n'
+												 })
+													
+							 end
+d310392422b5bad3754968fc34ae30b4|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2548|1|V|lua
+							if myStr == "" then
+								return    table.concat(
+													{'            <error type="', xmlEscape(self.msg), '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></error>\n'}) 
+													and
+													table.concat(
+													{'            <failure ChannelInfo ="', aboutChannel, '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n'})
+							elseif #myStr > 0 then
+									return 	table.concat(
+													{'            <error type="', xmlEscape(self.msg), '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></error>\n'}) 
+													 and 
+													 table.concat(
+													{'            <error params NiceXmlInfoMan="', myStr, '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></error>\n'})
+													and
+													table.concat(
+													{'            <failure Channel Erro Info ="', aboutChannel, '">\n',
+													 '                <![CDATA[', xmlCDataEscape(self.stackTrace),
+													 ']]></failure>\n'})
+							end
+458e92b7df8c1947449154d7159deaea|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2554|7|V|lua
+							-- print("=====================================================")
+							-- print(myStr)
+bfb34b6168e7b76a5eb470fa784c88a7|file:///home/bohn/luaUnit3_3/TestFile/testChannelIndex.lua|11|2|V|lua
+		print("hh")
+dbe117dd7d3ac7687ad0e43ed3ec938f|file:///home/bohn/luaUnit3_3/TestFile/testChannelIndex.lua|8|3|V|lua
+			print("hh")
+094e09f15d40a55d6d69894217751e70|file:///home/bohn/luaUnit3_3/TestFile/testChannelIndex.lua|10|8|v|lua
+	TestTable
+068de71fcceedb22e62be37be1fb74bd|file:///home/bohn/Test/TestCppCopy.cpp|4|7|v|cpp
+	ClassName
+fe11b60879395467c5bc199ca346c4da|file:///home/bohn/Test/TestCppCopy.cpp|6|2|v|cpp
+	PublicValOrObj
+fd9e6504071ec255275e14420c7cfaf9|file:///home/bohn/Test/TestCppCopy.cpp|11|1|V|cpp
+	protect:
+		ProtectedValOrObj
 	
-72cf95b27563bd26af61203cd989fdb1|file:///home/bohn/.config/nvim/init.vim|36|8|v|vim
-	$XDG_CONFIG_HOME
-72f2f344ef43c1072c083fc14987651c|file:///home/bohn/.config/nvim/init.vim|206|8|v|vim
-	XDG_CONFIG_HOME
-17cfcb43550bb409b76c7157c504d0ee|file:///home/bohn/.config/nvim/README_cn.md|169|1|v|markdown
-	| `Y`    | 复制选中文本至**系统剪切板** |
+	private:
+		PrivateValOrObj
+192faefc46eea5db1519a637151931d8|file:///home/bohn/Test/TestCppCopy.cpp|31|4|V|cpp
+		char *str;
+		cin >> str;
+		cout << str;
+9205c8fe8e75bfa3ce4f661448bdbb7b|file:///home/bohn/Test/TestCppCopy.cpp|31|1|V|cpp
+		MyClass obj3 = obj1;
+3c553aa7792a0f3570dc3b1508015edb|file:///home/bohn/Test/TestCppCopy.cpp|32|2|v|cpp
+	MyClass 
+c509659ffff2b27133d039cf4ba8d680|file:///home/bohn/luaUnit3_3/TestFile/testNIl.lua|5|1|V|lua
+		print("没有这个变量的时候")
+2b313559a72bcc62cfbf9eafcae520c3|file:///home/bohn/luaUnit3_3/luaunitVersion_2/testFunctionCall.lua|2|1|V|lua
+	#!/usr/bin/env lua
+	local lu = require('luaunit')
+	-- require("debug")
+	TestTable = { CN = { 1, 2 ,3, 4, 5 }, loadfile = {1, 2, 3}, start = {4, 5, 6}, nice = { 7, 8 }, day =  {10, 11 }}
 	
-0d3f6a32b3e04ce82319656404bb348c|file:///home/bohn/.config/nvim/init.vim|223|1|v|vim
-	cnoremap
-fff4398f36ed703d42375a496ee325fc|file:///home/bohn/.config/nvim_myOwn/coc-settings.json|16|1|v|jsonc
-		"suggest.enablePreview": true,
-3494e11777e7ace7c31fe72d9bee2c2e|file:///home/bohn/test.cc|87|1|V|cpp
-			cout
-5703f441b323e4ec7b1b87ef3b386cb9|file:///home/bohn/test.cc|86|1|V|cpp
-	    std::cout << std::endl;
-94ccb1cf26df8d05001c7c2462175783|file:///home/bohn/test.cc|88|4|V|cpp
-				:
-d258067f0ce0bac092bd4e2187421c86|file:///home/bohn/test.cc|89|1|V|cpp
-				:qq
-7720fed8e90e66ee5c55e78f491ce9ae|file:///home/bohn/.config/nvim/README_cn.md|423|1|V|markdown
-	### 其它
-	#### [vim-calendar](https://github.com/itchyny/calendar.vim)
-5b9ff8b5f252d9775cf898d62f677687|file:///home/bohn/test.cc|86|3|V|cpp
-			std::cout
-7611c3dd08fd6af6519a1914ed3b30f0|file:///home/bohn/md.md|1|12|V|markdown
-	# The first one 
-f6a49a9d436d75b3fdca2dbd419e982f|file:///home/bohn/.config/nvim/init.vim|421|1|V|vim
-	"Plug 'Xuyuanp/nerdtree-git-plugin'
-	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-	Plug 'junegunn/fzf.vim'
-	Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-	Plug 'kevinhwang91/rnvimr'
-	Plug 'airblade/vim-rooter'
-	Plug 'pechorin/any-jump.vim'
+	-- function setUp(CN, loadfile)
+	-- 	-- print("channel is ", CN)
+	-- 	-- print("loadfile is ", loadfile)
+	-- 	print("This is SetUp")
+	-- 		-- set up tests
+	-- 	print("----------------------------------")
+	-- 		self.a = 1
+	-- 		self.s = 'hop' 
+	-- 		self.t1 = {1,2,3}
+	-- 		self.t2 = {one=1,two=2,three=3}
+	-- 		self.t3 = {1,2,three=3}
+	-- end
+	--
+	-- function tearDown()
+	-- 	print("----------------------------------")
+	-- 	print("This is TearDown")
+	-- end
+	TestToto = {} --class
 	
-	" Taglist
-	Plug 'liuchengxu/vista.vim'
+	    function TestToto:setUp(CN)
+				if CN == nil then
+					print("function without Channel")
+				else
+					print("channel is ", CN)
+				end
+				print("This is SetUp")
+	        -- set up tests
+	        self.a = 1
+	        self.s = 'hop' 
+	        self.t1 = {1,2,3}
+	        self.t2 = {one=1,two=2,three=3}
+	        self.t3 = {1,2,three=3}
+	    end
 	
-	" Debugger
-	" Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-c --enable-python --enable-go'}
+			function TestToto:tearDown(CN)
+				if CN == nil then
+					print("function without Channel")
+				else
+					print("channel is ", CN)
+				end
+				print("This is tearDown")
+			end
+	---[==[
+	    function TestToto:test1_withFailure()
+	        -- print( "some stuff test 1" )
+	        lu.assertEquals( self.a , 1 )
+	        -- will fail
+	        lu.assertEquals( self.a , 2 )
+	        lu.assertEquals( self.a , 2 )
+	    end
+	--]==]
 	
-	" Auto Complete
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	" Plug 'neoclide/coc.nvim', {'branch': 'release', 'tag': 'v0.0.79'}
-	Plug 'wellle/tmux-complete.vim'
+	---[==[
+	    function TestToto:test2_withFailure(start, CN, loadfile)
+	    -- function TestToSuiteto:test2_withFailure(index)
+	        -- print( "some stuff test 2" )
+					print("---------------------------------------------------TestToto:test2_withFailure three tri-dimensional param" )
+					print("channel", CN)
+					print("loadfile", loadfile)
+	        lu.assertEquals( self.a , 1 )
+	        lu.assertEquals( self.s , 'hop' )
+	        -- will fail
+	        lu.assertEquals( self.s , 'bof' )
+	        lu.assertEquals( self.s , 'bof' )
+	    end
+	--]==]
+	---[==[
+	    function TestToto:test3()
+	        -- print( "some stuff test 3" )
+					print("---------------------------------------------------TestToto:test3 No param")
+	        lu.assertEquals( self.a , 1 )
+	        lu.assertEquals( self.s , 'hop' )
+	        lu.assertEquals( type(self.a), 'number' )
+	    end
 	
-	" Snippets
-	" Plug 'SirVer/ultisnips'
-	Plug 'theniceboy/vim-snippets'
+	    function TestToto:test4(loadfile, start)
+	        -- print( "some stuff test 4" )
+					print("---------------------------------------------------TestToto:test4 with two tri-dimensional param")
+					print("loadfile is ", loadfile)
+					print("start is ", start)
+	        lu.assertNotEquals( self.a , 2 )
+	    end
+	--]==]
 	
-	" Undo Tree
-	Plug 'mbbill/undotree'
+	--[==[
+	    function TestToto:test5()
+	        -- print( "some stuff test 5" )
+	        lu.assertEvalToTrue( self.a )
+	        lu.assertEvalToFalse( self.a ) -- will trigger the failure
+	    end
 	
-	" Git
-	Plug 'theniceboy/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
-	Plug 'theniceboy/fzf-gitignore', { 'do': ':UpdateRemotePlugins' }
-	"Plug 'mhinz/vim-signify'
-	Plug 'airblade/vim-gitgutter'
-	Plug 'cohama/agit.vim'
-	Plug 'kdheepak/lazygit.nvim'
+	    function TestToto:test6()
+	        -- print( "some stuff test 6" )
+	        lu.assertTrue( true )
+	        lu.assertFalse( false )
+	        lu.assertEvalToFalse( nil )
+	        lu.assertFalse( nil ) -- trigger the failure assertFalse is strict
+	    end
 	
-	" Tex
-	" Plug 'lervag/vimtex'
+	    function TestToto:test7()
+	        -- assertEquals( {1,2}, self.t1 )
+	        -- assertEquals( {1,2}, self.t2 )
+	        lu.assertEquals( {1,2}, self.t3 )
+	    end
 	
-	" CSharp
-	Plug 'OmniSharp/omnisharp-vim'
-	Plug 'ctrlpvim/ctrlp.vim' , { 'for': ['cs', 'vim-plug'] } " omnisharp-vim dependency
+	    function TestToto:test8a()
+	        -- failure occurs in a submethod
+	        self:funcWithError()
+	    end
 	
-	" HTML, CSS, JavaScript, Typescript, PHP, JSON, etc.
-	Plug 'elzr/vim-json'
-	Plug 'neoclide/jsonc.vim'
-	Plug 'othree/html5.vim'
-	Plug 'alvan/vim-closetag'
-	" Plug 'hail2u/vim-css3-syntax' " , { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-	" Plug 'spf13/PIV', { 'for' :['php', 'vim-plug'] }
-	" Plug 'pangloss/vim-javascript', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-	Plug 'yuezk/vim-js', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-	" Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-	" Plug 'jelera/vim-javascript-syntax', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-	"Plug 'jaxbot/browserlink.vim'
-	Plug 'HerringtonDarkholme/yats.vim'
-	" Plug 'posva/vim-vue'
-	" Plug 'evanleck/vim-svelte', {'branch': 'main'}
-	" Plug 'leafOfTree/vim-svelte-plugin'
-	" Plug 'leafgarland/typescript-vim'
-	Plug 'MaxMEllon/vim-jsx-pretty'
-	Plug 'pangloss/vim-javascript'
-	Plug 'leafgarland/typescript-vim'
-	Plug 'peitalin/vim-jsx-typescript'
-	Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-	Plug 'pantharshit00/vim-prisma'
+	    function TestToto:test8b()
+	        -- failure occurs in a submethod
+	        self:funcWithFuncWithError()
+	    end
 	
-	" Go
-	Plug 'fatih/vim-go' , { 'for': ['go', 'vim-plug'], 'tag': '*' }
+	    function TestToto:funcWithFuncWithError()
+	        self:funcWithError()
+	    end
 	
-	" Python
-	" Plug 'tmhedberg/SimpylFold', { 'for' :['python', 'vim-plug'] }
-	Plug 'Vimjas/vim-python-pep8-indent', { 'for' :['python', 'vim-plug'] }
-	Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins', 'for' :['python', 'vim-plug'] }
-	"Plug 'vim-scripts/indentpython.vim', { 'for' :['python', 'vim-plug'] }
-	"Plug 'plytophogy/vim-virtualenv', { 'for' :['python', 'vim-plug'] }
-	Plug 'tweekmonster/braceless.vim', { 'for' :['python', 'vim-plug'] }
+	    function TestToto:funcWithError()
+	        error('Bouhouhoum error!')
+	    end
+			--]==]
 	
-	" Flutter
-	Plug 'dart-lang/dart-vim-plugin'
+	---[===[
+	-- class TestTiti
+	TestTiti = {} --class
+	    function TestTiti:setUp()
+	        -- set up tests
+					print("TestTiti : SetUp")
+	        self.a = 1
+	        self.s = 'hop' 
+	        -- print( 'TestTiti:setUp' )
+	    end
 	
-	" Swift
-	Plug 'keith/swift.vim'
-	Plug 'arzg/vim-swift'
+	    function TestTiti:tearDown()
+	        -- some tearDown() code if necessary
+	        print( 'TestTiti:tearDown' )
+	    end
 	
-	" Markdown
-	Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
-	Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'markdown', 'vim-plug'] }
-	Plug 'mzlogin/vim-markdown-toc', { 'for': ['gitignore', 'markdown', 'vim-plug'] }
-	Plug 'dkarter/bullets.vim'
+			---[==[
+	    function TestTiti:test1_withFailure(nice, day)
+	        -- print( "some stuff test 1" )
+					print("---------------------------------------------------TestTiti:test1_withFailure")
+					print("nice : ", nice)
+					print("day : ", day)
+					-- print("channel : ", CN)
+	        lu.assertEquals( self.a , 1 )
+	        -- will fail
+	        lu.assertEquals( self.a , 2 )
+	        lu.assertEquals( self.a , 2 )
+	    end
+			--]==]
 	
-	" Other filetypes
-	" Plug 'jceb/vim-orgmode', {'for': ['vim-plug', 'org']}
+			---[===[
+	    function TestTiti:test2_withFailure(CN)
+	        -- print( "some stuff test 2" )
+					print("---------------------------------------------------TestTiti:test2_withFailure")
+					print("CN is ", CN)
+	        lu.assertEquals( self.a , 1 )
+	        lu.assertEquals( self.s , 'hop' )
+	        -- will fail
+	        lu.assertEquals( self.s , 'bof' )
+	        lu.assertEquals( self.s , 'bof' )
+	    end
 	
-	" Editor Enhancement
-	"Plug 'Raimondi/delimitMate'
-	Plug 'jiangmiao/auto-pairs'
-	Plug 'mg979/vim-visual-multi'
-	Plug 'tomtom/tcomment_vim' " in <space>cn to comment a line
-	Plug 'theniceboy/antovim' " gs to switch
-	Plug 'tpope/vim-surround' " type yskw' to wrap the word with '' or type cs'` to change 'word' to `word`
-	Plug 'gcmt/wildfire.vim' " in Visual mode, type k' to select all text in '', or type k) k] k} kp
-	Plug 'junegunn/vim-after-object' " da= to delete what's after =
-	Plug 'godlygeek/tabular' " ga, or :Tabularize <regex> to align
-	Plug 'tpope/vim-capslock'	" Ctrl+L (insert) to toggle capslock
-	Plug 'easymotion/vim-easymotion'
-	" Plug 'Konfekt/FastFold'
-	"Plug 'junegunn/vim-peekaboo'
-	"Plug 'wellle/context.vim'
-	Plug 'svermeulen/vim-subversive'
-	Plug 'theniceboy/argtextobj.vim'
-	Plug 'rhysd/clever-f.vim'
-	Plug 'AndrewRadev/splitjoin.vim'
-	Plug 'theniceboy/pair-maker.vim'
-	Plug 'theniceboy/vim-move'
-	" Plug 'jeffkreeftmeijer/vim-numbertoggle'
-	Plug 'Yggdroot/indentLine'
+			--[==[
+	    function TestTiti:test3()
+	        -- print( "some stuff test 3" )
+	        lu.assertEquals( self.a , 1 )
+	        lu.assertEquals( self.s , 'hop' )
+	    end
+			--]==]
+	-- class TestTiti
 	
-	" For general writing
-	Plug 'junegunn/goyo.vim'
-	"Plug 'reedes/vim-wordy'
-	"Plug 'ron89/thesaurus_query.vim'
+	--]===]
 	
-	" Bookmarks
-	" Plug 'MattesGroeger/vim-bookmarks'
+	--[===[
+	-- simple test functions that were written previously can be integrated
+	-- in luaunit too
+	function test1_withFailure()
+		print("This is Test1_withFailure.")
+	    assert( 1 == 1)
+	    -- will fail
+	    assert( 1 == 2)
+	end
 	
-	" Find & Replace
-	Plug 'brooth/far.vim', { 'on': ['F', 'Far', 'Fardo'] }
+	function test2_withFailure()
+		print("This is Test2_withFailure.")
+	    assert( 'a' == 'a')
+	    -- will fail
+	    assert( 'a' == 'b')
+	end
 	
-	" Documentation
-	"Plug 'KabbAmine/zeavim.vim' " <LEADER>z to find doc
+	function test3()
+		-- print("This is Test3")
+			-- print("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb")
+			-- print(index)
+	    assert( 1 == 1)
+	    assert( 'a' == 'a')
+	end
+	--]===]
 	
-	" Mini Vim-APP
-	"Plug 'jceb/vim-orgmode'
-	"Plug 'mhinz/vim-startify'
-	Plug 'skywind3000/asynctasks.vim'
-	Plug 'skywind3000/asyncrun.vim'
+	local runner = lu.LuaUnit.new()
+	runner:setOutputType("tap")
+	os.exit( runner:runSuite() )
+9ed39f867a2e119c67ce7b2a5895f959|untitled:2|1|1|V|
+	function test(CN)
+		print("This is test and cn is ", CN)
+	end
+801a926bf9106586a8e1a9c107ee4fed|file:///home/bohn/luaUnit3_3/luaunitVersion_2/testFunctionCall.lua|12|1|V|lua
+	function test(CN)
+		print("This is test and cn is ", CN)
+baeccf93b800d2b5eccd8ce84555b6c8|file:///home/bohn/luaUnit3_3/luaunitVersion_2/testFunctionCall.lua|14|1|v|lua
+	hhhTest.test(54)
+d2c71830a689b86f01253ec48f228ea4|file:///home/bohn/luaUnit3_3/luaunitVersion_2/testFunctionCall.lua|12|1|V|lua
+	MainCallPoint(testFuncCall(3), 2)
+874b4e605657fe3062f3d3f81cb6501e|file:///home/bohn/luaUnit3_3/luaunitVersion_2/TestGlobalSetUp.lua|11|1|V|lua
+		print("----------------------------------")
+bc5476eafb142c6907ee669e7b461870|file:///home/bohn/luaUnit3_3/luaunitVersion_2/TestGlobalSetUp.lua|9|1|V|lua
+		print("----------------------------------aaaaaaaaa")
+a796e31ea62d2470ea6e095051726523|file:///home/bohn/luaUnit3_3/luaunitVersion_2/TestGlobalSetUp.lua|6|16|v|lua
+	CN, loadfile
+b8286629578f1d5f81b8476a81c64f94|file:///home/bohn/luaUnit3_3/luaunitVersion_2/example_with_luaunit.lua|41|1|V|lua
+				..
+d663eb0bae5fdf3341ae1c48c9071435|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|2201|25|v|lua
+	endS
+d59f266d3e3c27ee7f2ee9bf69566e2c|file:///home/bohn/Test/testSizeof.cpp|2|1|V|cpp
+	#include <
+1470c8339f7bd64c4a00003c9b048f26|file:///home/bohn/Test/testSizeof.cpp|8|17|v|cpp
+	expression-or-type
+15a2b319b32a45b5e614513e40ed48fa|file:///home/bohn/Test/testSizeof.cpp|4|1|V|cpp
+	extern int x;
+f60be50875ede180e993ae30bf30e846|file:///home/bohn/Test/testSizeof.cpp|2|1|v|cpp
+	using namespace std;
+bcee497fe10c2a61481d2ec50cdde91a|file:///home/bohn/luaUnit3_3/luaunitVersion_2/example_with_luaunit.lua|109|1|V|lua
+			function TestToto:test_P1_nice()
+					print("This is TestToto:test_P1_nice")
+			end
+8895a539884874267606c71f539078f0|file:///home/bohn/luaUnit3_3/luaunitVersion_2/example_with_luaunit.lua|117|26|v|lua
+	P1_nice
+7c6483ddcd99eb112c060ecbe0543e86|file:///home/bohn/luaUnit3_3/luaunitVersion_2/example_with_luaunit.lua|113|29|v|lua
+	nice
+a8b72beec62ffce53e4b014f23ec35dc|file:///home/bohn/luaUnit3_3/luaunitVersion_2/example_with_luaunit.lua|117|1|V|lua
+			function TestToto:test_A1_nice()
+					print("This is TestToto:test_P1_nice")
+			end
+70d9dc6928910f751acbd364d02e234c|file:///home/bohn/luaUnit3_3/luaunitVersion_2/example_with_luaunit.lua|124|1|V|lua
+			function TestToto:test_H1_nice()
+					print("This is TestToto:test_P1_nice")
+			end
+178c5598b4f0acd844711627ee7327d9|file:///home/bohn/markDownFiles/LuaUnitExecFlow.md|3|1|v|markdown
+	进入 luaUnit 后
+3924efefeb09ddb4c97f2533211406be|file:///home/bohn/markDownFiles/LuaUnitExecFlow.md|3|681|v|markdown
+	对这张函数表进行操作，
+8016ee0f1cc9011aea203fcdb2421a22|file:///home/bohn/markDownFiles/LuaUnitExecFlow.md|3|690|v|markdown
+	我们将在执行所有有效测试函数之前，
+9b178c2ee03f758fddc1f442314c4158|file:///home/bohn/markDownFiles/LuaUnitExecFlow.md|5|89|v|markdown
+	luaunit
+8011cbdd41b981b2a19a825cbbdbaa42|file:///home/bohn/markDownFiles/LuaUnitExecFlow.md|21|405|v|markdown
+	`expandClasses`
+5f8142cd4fc99f6cc4ecd05c21794faa|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|1841|1|V|lua
+	    -- all assertions with Coroutine duplicate Thread assertions
+96fa51dc2a6e25b7a82febcc8641eb61|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|1851|7|v|lua
+	 all assertions with Coroutine duplicate Thread assertions
+7bceb3e3b9dd1a0758aeca2a217f051e|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|1849|1|V|lua
+	    { 'assertNotIsThread'       , 'assert_not_coroutine' },
+bdeebcbc44e01f2c36c60648700b9553|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|1852|8|v|lua
+	assertNotIsThread
+b25a40bed0a707d9977adff37f10aef8|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|1852|29|v|lua
+	assert_not_coroutine
+cbf3cff4d2030a5068f7be3cf5ed6393|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|1599|1|V|lua
+	------------------------------------------------------------------
+	--              Scientific assertions
+	------------------------------------------------------------------
+21234a0e100d74037a4da2e53f3200d7|file:///home/bohn/luaUnit3_3/luaunitVersion_2/luaunit.lua|1693|17|v|lua
+	Scientific
+085b18aa826eb65cfcb9056fdc23d284|file:///home/bohn/luaUnit3_3/luaunitVersion_2/TestMyWaitFunc.lua|75|1|V|lua
+	---[==[
+2a90ee5c6254b597b09c0d7f8ad7c9c0|file:///home/bohn/luaUnit3_3/luaunitVersion_2/TestMyWaitFunc.lua|80|8|v|lua
+	MyWaitFunc
+d6e41423b8c4e7a414bc9e7ab96ba642|file:///home/bohn/luaUnit3_3/luaunitVersion_2/TestMyWaitFunc.lua|80|8|v|lua
+	my_wait_fun
+e9a54445776e382897f3816953ffc59d|file:///home/bohn/luaUnit3_3/luaunitVersion_2/testFunctionCall.lua|1|1|v|lua
+	require("hhhTest")
 	
-	" Vim Applications
-	Plug 'itchyny/calendar.vim'
+	function testFuncCall(CN)
+		print("Here you called me.")
+		print("The CN is ", CN)
+	end
 	
-	" Other visual enhancement
-	Plug 'luochen1990/rainbow'
-	Plug 'mg979/vim-xtabline'
-	Plug 'ryanoasis/vim-devicons'
-	Plug 'wincent/terminus'
-	
-	" Other useful utilities
-	Plug 'lambdalisue/suda.vim' " do stuff like :sudowrite
-	" Plug 'makerj/vim-pdf'
-	"Plug 'xolox/vim-session'
-	"Plug 'xolox/vim-misc' " vim-session dep
-	
-	" Dependencies
-	" Plug 'MarcWeber/vim-addon-mw-utils'
-	" Plug 'kana/vim-textobj-user'
-	" Plug 'roxma/nvim-yarp'
-	
-	
-	call plug#end()
-	set re=0
-	
-	" experimental
-	set lazyredraw
-	"set regexpengine=1
-	
-	
-	" ===
-	" === Dress up my vim
-	" ===
-	set termguicolors " enable true colors support
-	let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-	"set background=dark
-	"let ayucolor="mirage"
-	"let g:oceanic_next_terminal_bold = 1
-	"let g:oceanic_next_terminal_italic = 1
-	"let g:one_allow_italics = 1
-	
-	"color dracula
-	"color one
-	color deus
-	"color gruvbox
-	"let ayucolor="light"
-	"color ayu
-	"color xcodelighthc
-	"set background=light
-	"set cursorcolumn
-	
-	hi NonText ctermfg=gray guifg=grey10
-	"hi SpecialKey ctermfg=blue guifg=grey70
-	
-	" ===================== Start of Plugin Settings =====================
-	
-	
-	" ===
-	" === eleline.vim
-	" ===
-	let g:airline_powerline_fonts = 0
-	
-	
-	" ==
-	" == GitGutter
-	" ==
-	" let g:gitgutter_signs = 0
-	let g:gitgutter_sign_allow_clobber = 0
-	let g:gitgutter_map_keys = 0
-	let g:gitgutter_override_sign_column_highlight = 0
-	let g:gitgutter_preview_win_floating = 1
-	let g:gitgutter_sign_added = '▎'
-	let g:gitgutter_sign_modified = '░'
-	let g:gitgutter_sign_removed = '▏'
-	let g:gitgutter_sign_removed_first_line = '▔'
-	let g:gitgutter_sign_modified_removed = '▒'
-	" autocmd BufWritePost * GitGutter
-	nnoremap <LEADER>gf :GitGutterFold<CR>
-	nnoremap H :GitGutterPreviewHunk<CR>
-	nnoremap <LEADER>g- :GitGutterPrevHunk<CR>
-518a51b284c6f6bbfd5f43655217d213|file:///home/bohn/.config/nvim/init.vim|220|1|V|vim
-	cnoremap <C-a> <Home>
-b9a3c1766adde39dd897ebe7bcb80c9c|file:///home/bohn/.config/nvim/init.vim|216|11|V|vim
-	stst{}kurst
-ef4e44c43c7666ada50d0e7fe5f1a1fc|file:///home/bohn/test.cc|86|6|V|cpp
-			cout
-				stusttnk
-	
-	
-	#endif
-	
-	
-	
-	    return 0;
-	}
-	
-915b815da25db74212616fc2838aab22|file:///home/bohn/test.cc|86|6|V|cpp
-			cout
-				stusttnk
-5313985566ab77a371ffb2df22fd97b6|file:///home/bohn/.config/ranger/rc.conf|372|13|V|conf
-	map gF cd ~/.sconfig
-ecc33cb82c96793e9420aac8a113b6d5|file:///home/bohn/.config/nvim/plugged/vim-instant-markdown/README.md|116|1|v|markdown
-	   - If you're on OSX and are using zsh, try to add `set shell=bash\ -i` in your
-625c8eb77a0900437f498ff5bff61d14|file:///home/bohn/.config/nvim/init.vim|52|1|V|vim
-	" ===
-	" === Editor behavior
-7c92ee1ad7fb97cdd61b7673c6d244bf|file:///home/bohn/.config/nvim/init.vim|53|1|V|vim
-	" ===
-afa3e7e4a29c17327b76ee0edb9a0a65|file:///home/bohn/.config/nvim/init.vim|53|1|V|vim
-	" === Editor behavior
-48aad297cb61e5167cc93339a9962493|file:///home/bohn/.config/nvim/plugged/vim-instant-markdown/README.md|116|1|V|markdown
-	   - If you're on OSX and are using zsh, try to add `set shell=bash\ -i` in your
-	  `.vimrc` to set interactive bash as the default Vim shell. (See [this
-019ff38d561813d5b30ebc684d9a1d62|file:///home/bohn/.config/nvim/init.vim|55|1|V|vim
-	let g:instant_markdown_autostart = 1
-ea2b2676c28c0db26d39331a336c6b92|file:///home/bohn/.config/nvim/init.vim|56|28|v|vim
-	start
-d856ccb12eae319669d74f9ffcb7acd2|file:///home/bohn/.config/nvim/plugged/vim-instant-markdown/README.md|76|1|v|markdown
-	"let g:instant_markdown_slow = 1
-	"let g:instant_markdown_autostart = 0
-	"let g:instant_markdown_open_to_the_world = 1
-	"let g:instant_markdown_allow_unsafe_content = 1
-	"let g:instant_markdown_allow_external_content = 0
-	"let g:instant_markdown_mathjax = 1
-	"let g:instant_markdown_mermaid = 1
-	"let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
-	"let g:instant_markdown_autoscroll = 0
-	"let g:instant_markdown_port = 8888
-	"let g:instant_markdown_python = 1
-4b1c48ae6c2534f08755d14eef9194f4|file:///home/bohn/.config/nvim/init.vim|55|1|V|vim
-	let g:instant_markdown_autoscroll = 1
-9abb6107a067b357546121d39ee0353f|file:///home/bohn/.config/nvim/init.vim|55|1|V|vim
-	let g:instant_markdown_mathjax = 1
-ff21d7afaa1ec6bed3f886e20a46cbf8|file:///home/bohn/.config/nvim/init.vim|53|1|V|vim
-	let g:instant_markdown_open_to_the_world = 1
-8104f44ec894a711269566dd2b742a5c|file:///home/bohn/.config/nvim/init.vim|64|1|V|vim
-	let g:instant_markdown_python = 1
-19cf44f0905f5586b257512d83f0ffb1|file:///home/bohn/.config/nvim/init.vim|61|1|V|vim
-	let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
-a65cb4b22c035300b06f1f2e35f3e2cb|file:///home/bohn/.config/nvim/init.vim|54|1|V|vim
-	let g:instant_markdown_slow = 1
-ce3f372a94d179db0a781f6d6df6f98c|file:///home/bohn/md.md|4|1|v|markdown
-	<++>
-64cffe0c49e52fdbc8cbe06ed07f7392|file:///home/bohn/.config/nvim/init.vim|53|1|V|vim
-	"let g:instant_markdown_browser = "chromium --new-window"
-3e181e712ce6baef0bc8edb037da5659|file:///home/bohn/.config/nvim/init.vim|55|1|V|vim
-	let g:instant_markdown_browser = "chromium"
-6953d67b31d888bc9524cf45db088656|file:///home/bohn/.config/nvim/init.vim|62|1|V|vim
-	noremap <F7> <ESC>:InstantMarkdownPreview<CR>
-31fde7b05ac8952dacf4af8a704074ec|file:///home/bohn/.config/nvim/init.vim|63|35|v|vim
-	Preview
-05965c1458fcd93a76b8e94dbf5ef7dc|file:///home/bohn/.config/nvim/init.vim|231|11|V|vim
-	inoremap tn <ESC>
-fd62dbfe7f0e9d37a78dafe053f333e3|file:///home/bohn/test.cc|86|3|V|cpp
-			kucftntn
-bdee703c89c64c546a69ae2d4a9671da|file:///home/bohn/test.cc|1|1|v|cpp
-	#include <iostream>
-327a6c4304ad5938eaf0efb6cc3e53dc|file:///home/bohn/test.cc|100|3|v|cpp
-	flag
-85370bddac3936d0059151367fc738f0|file:///home/bohn/test.cc|36|1|V|cpp
-			{
-	
-			}
-0cf31b2c283ce3431794586df7b0996d|file:///home/bohn/test.cc|38|1|V|cpp
+	function MainCallPoint(testFuncCall(
+0cf31b2c283ce3431794586df7b0996d|file:///home/bohn/MyRepos/multithreaded_pipeline/defines.h|15|1|v|cpp
 	    
-7701efcb5d3d6d9d1cae9ac38a7c7410|file:///home/bohn/.config/nvim/init.vim|52|1|V|vim
-	"set shell=bash\ -i
-	let g:instant_markdown_browser = "firefox"
-	"let g:instant_markdown_autostart = 0
-	"let g:instant_markdown_open_to_the_world = 1
-	"let g:instant_markdown_allow_unsafe_content = 1
-	let g:instant_markdown_allow_external_content = 0
-	let g:instant_markdown_mathjax = 1
-	let g:instant_markdown_mermaid = 1
-	let g:instant_markdown_autoscroll = 0
-	let g:instant_markdown_port = 8888
-	noremap <F7> <ESC>:InstantMarkdownPreview<CR>
-	noremap <F8> <ESC>:InstantMarkdownStop<CR>
+320eb2396995b8d5dd68015d1a3cb579|file:///home/bohn/MyRepos/multithreaded_pipeline/defines.h|14|5|v|cpp
+	tmp.append X.append("\n");\
+	    std::cout << tmp;\
+	    }
 	
+	#define LOGEX(X
+031fabf042dd6003e46db610a2c1f172|file:///home/bohn/MyRepos/multithreaded-pipeline/README.md|24|1|v|markdown
+	# Sample Execution
+d2f1a21ade876791d4345b1d29cb036c|file:///home/bohn/MyRepos/multithreaded_pipeline/|8|1|v|netrw
+	thread_base.o
+5276b33691ca3d42e5f320036d4bd500|file:///home/bohn/MyRepos/multithreaded-pipeline/pipeline/Pipeline.h|4|1|V|cpp
+	#include "Task.h"
+eaeb30f9f18e0c50b178676f3eaef45f|file:///home/bohn/MyRepos/multithreaded-pipeline/pipeline/Pipeline.h|5|11|v|cpp
+	Task
+a0169e92f45c396a6cf1fba030df244c|file:///home/bohn/Test/TestConstruct.cpp|14|1|V|cpp
+		A a1(1);
+d137e18d4a9d1c3c5e1d43513e7129b6|file:///home/bohn/Test/TestConstruct.cpp|25|1|V|cpp
+		std::cout << "The a2 " << a2.m << std::endl;
+6e6efddae0ea25054839574121cc4778|file:///home/bohn/Test/TestConstruct.cpp|24|2|v|cpp
+	A a1(q);
+0c6bf37f6b1d274fc17e08a9d4f4337f|file:///home/bohn/Test/TestConstruct.cpp|24|2|V|cpp
+		A a1(q);
+e69ee10a2158fbcbde33eae2b34a5fed|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/constructorTest.cpp|83|3|V|cpp
+	revisited
+7ca15ab23bb513a96ac12f93650245e9|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|72|1|v|cpp
+				if (total.bookNo == trans.bookNo) {
+					total += trans;
+					// total.units_sold += trans.units_sold;
+					// total.revenue += trans.revenue;
+				} else {
+					// Print result for the previous book
+					cout << total << endl;
+					total.units_sold = trans.units_sold;
+					total.bookNo = trans.bookNo;
+					total.revenue = trans.revenue;
+				}
 	
-ee0d16c40173fdfdf2cdd5ec92a4fb60|file:///home/bohn/.config/nvim/init.vim|758|1|V|vim
-	"let g:instant_markdown_autostart = 0
-11b59cbff1b43e8fc3df491b132f9b38|file:///home/bohn/.config/nvim/init.vim|758|1|V|vim
-	"let g:instant_markdown_open_to_the_world = 1
-7a2bb7fea6b89a130cf913a703e032b6|file:///home/bohn/.config/nvim/init.vim|758|1|V|vim
-	"let g:instant_markdown_allow_unsafe_content = 1
-f678f8b8729ef509fc701dc1a10c386a|file:///home/bohn/.config/nvim/init.vim|758|1|V|vim
-	let g:instant_markdown_allow_external_content = 0
-d8194e17a07cf733ebecaa83ff50cd30|file:///home/bohn/.config/nvim/init.vim|760|1|V|vim
-	let g:instant_markdown_autoscroll = 0
-da8b07793f286cb1ebe87e82d1be65a6|file:///home/bohn/.config/nvim/init.vim|765|1|V|vim
-	let g:instant_markdown_slow = 0
-	let g:instant_markdown_autostart = 0
-	" let g:instant_markdown_open_to_the_world = 1
-	" let g:instant_markdown_allow_unsafe_content = 1
-	" let g:instant_markdown_allow_external_content = 0
-	" let g:instant_markdown_mathjax = 1
-	let g:instant_markdown_autoscroll = 1
-16b0dd51605c50dffea9080073459a9d|file:///home/bohn/.config/nvim/init.vim|758|1|V|vim
-	" let g:instant_markdown_autostart = 0
-4beeb8ca51f2604b669bacab8c31fc2c|file:///home/bohn/.config/nvim/init.vim|49|5|V|vim
-	" ===
-	" === for markdown
-	" ===
-7764f626dba0db4138ea2c06af20f072|file:///home/bohn/.config/nvim/init.vim|50|7|v|vim
-	for markdown
-2d725135ec8dc8fda48fab7cbb83764b|file:///home/bohn/.config/nvim/init.vim|52|1|V|vim
-	inoremap ,,a <ESC>
-354400e71b528548e538c456f13588e0|file:///home/bohn/.config/nvim/init.vim|53|14|v|vim
-	<ESC>
-3e303bacbdb8b5c874ce2664c2f98203|file:///home/bohn/.config/nvim/init.vim|159|9|v|vim
-	<LEADER><CR> :nohlsearch<CR>
-	
-	" Adjacent duplicate words
-	noremap <LEADER>dw /\(\<\w\+\>\)\_s*\1
-	
-	" Space to Tab
-	nnoremap <LEADER>tt :
-daf608e1db8aa50a7ac3dc656da96080|file:///home/bohn/.config/nvim/init.vim|896|1|V|vim
-	" ==
-2b174841c48f4e1a3312a4e626dae661|file:///home/bohn/.config/nvim/init.vim|777|1|V|vim
+4738019ef434f24099319565cd5185e5|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|26|24|v|cpp
+	trans
+9a49e6ce1d2c13e52dd0e86ea1883e19|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|36|3|V|cpp
+			is >> dest;
+601dcfc062614b8c27121f43cb0de199|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|36|3|V|cpp
+			cout << is << endl;
+0b43c25ccf2340e23492d4d3141479dc|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|34|42|v|cpp
+	dest
+cab8111fd0b710a336c898e539090e34|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|34|2|v|cpp
+	void
+f06dfdd776df4c31b1ff8447b2771475|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|48|1|V|cpp
+	std::istream& operator>>(std::istream& in, Sales_data& s)
 	{
-		stn
+		double price;
+		in >> s.bookNo >> s.units_sold >> price;
+		// check that the inputs succeeded
+		if (in)
+			s.revenue = s.units_sold * price;
+		else
+			s = Sales_data(); // input failed: reset object to default state
+		return in;
 	}
-3f9f04c2e44b49e94b1190a7087d28be|file:///home/bohn/.config/nvim/init.vim|776|1|V|vim
-	< kucf >
-509b10fe543c7a51d6a0288806522090|file:///home/bohn/.config/ranger/rc.conf|386|22|v|conf
-	wallpapers
+	
+	std::ostream& operator<<(std::ostream& os, Sales_data& s)
+	{
+		std::cout << s.bookNo << " " << s.revenue << " " << s.units_sold << std::endl;
+		return os;
+	}
+679adbb6de852f7e82ac7573ddda0312|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|34|1|V|cpp
+		istream &read(std::istream& is, Sales_data &item)
+		{
+			double price = 0;
+			is >> item.bookNo >> item.units_sold >> price;
+			item.revenue = item.units_sold * price;
+			return is;
+		}
+fe3212991c667e81d3fa7d5431e2e84d|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|67|6|v|cpp
+	cin >> total
+46b08cac403f9032c08c5e710cfbc684|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|66|11|V|cpp
+											//
+4cefed03c3e2b9c0af31d146b4ca8ec9|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|70|10|v|cpp
+	cin >> trans
+549dfd4d4a19425ca51751273b21bc38|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|77|10|V|cpp
+					cout << total << endl;
+					total.units_sold = trans.units_sold;
+					total.bookNo = trans.bookNo;
+					total.revenue = trans.revenue;
+2d7ddfd9e0aca32da6b4085de0ffc522|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|78|11|v|cpp
+	ostream &os
+5a9f416f862ab6557856be9cb68a500a|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|78|15|v|cpp
+	const Sales_data &item
+1fa77ef25cb1046a82fa14e7cff1593c|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|81|3|V|cpp
+			cout << total << endl;
+bc8795f265b2d329b1a4e71ed6cfd640|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|74|1|V|cpp
+					// total.units_sold += trans.units_sold;
+0a9b025f21570d7611108d6928980481|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|74|1|V|cpp
+					// total.revenue += trans.revenue;
+7a1a02a66b0f97e2f89c0b310ba888f8|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|75|1|V|cpp
+					// Print result for the previous book
+25fe123cb7798a931af1833b83a0ce9e|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|70|3|v|cpp
+	Sales_data trans(is)
+b36738310e99713eb72d37ac5dd008d2|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|71|10|v|cpp
+	read(is, trans)
+1a483606f07d0118d74a1ea16b691b99|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|70|22|V|cpp
+			Sales_data trans(is);
+1d786565d149fcda793c3c80ecc58941|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|71|3|V|cpp
+			while (Sales_data trans(is)) {
+8ef7e353d33c7a9721b949794b051117|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|41|1|V|cpp
+	istream &read(std::istream& is, Sales_data &item)
+	{
+		double price = 0;
+		is >> item.bookNo >> item.units_sold >> price;
+		item.revenue = item.units_sold * price;
+		return is;
+	}
+	
+	ostream &print(ostream &os, const Sales_data &item)
+	{
+		os << item.isbn() << " " << item.units_sold << " "
+			 << item.revenue << " " << item.avg_price();
+		return os;
+	}
+3f877da8ba9325c39e4fc6e4703c460e|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|68|20|V|cpp
+		std::istream &is = cin;
+		std::ostream &os = cout;
+6ee5318f32529ffad0eb13c9338fdace|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|71|6|v|cpp
+	read(is, total)
+a253e552ea230ae8d836a8a09a221ffb|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|77|5|V|cpp
+					print(os, total);
+ec8c4ec30c1bc88c0ad7f69126e7fb09|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|71|15|v|cpp
+	 != NULL
+0af46f7550391a6e1a2606382f8383fc|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|68|1|V|cpp
+		// 没有运算符重载等工具的纯天然版
+bdb54cd016f90a1e68dfc9aa46e182d6|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|67|29|v|cpp
+	 // variable to hold data for the next transaction
+04bb1ebc239dee33aed7970f7536fe0d|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|45|1|V|cpp
+		double price = 0;
+		is >> item.bookNo >> item.units_sold >> price;
+		item.revenue = item.units_sold * price;
+b02d06eec80b690cfc62801d6f4cc58c|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|28|21|v|cpp
+	*this
+767d81dac748e2cac0ee65eae844fd34|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|42|1|V|cpp
+		double revenue = 0.0;
+67362dfbd0dff9f78a232b5460a99a7d|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|43|9|v|cpp
+	revenue
+fd43c00d48afa302633d55de80b7b424|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|43|17|V|cpp
+		double avg_price = 0.0;
+6ee25a83a863be24793b6449f352a3c6|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|77|19|v|cpp
+	total.is
+ed41ce70a1ab8e1485db7b0b83b9a2e5|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|78|11|v|cpp
+	total.
+073697f3ddbc50877116868965228d83|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|78|1|V|cpp
+		std::istream &is = cin;
+410725845b96525510bde457574c8c2e|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|81|20|v|cpp
+	trans.is
+abf36fc146f624cb097f12c72ca3d76c|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|81|14|v|cpp
+	bookNo
+2e00be0fbc64333cf46633ffcf61535a|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|68|1|V|cpp
+	Sales_data& operator+=(Sales_data& lhs, const Sales_data& rhs)
+	{
+		lhs.revenue += rhs.revenue;
+		lhs.units_sold += rhs.units_sold;
+		return lhs;
+	}
+f1267e1d6bf0754324f5ef74bcc459bc|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|60|39|v|cpp
+	, const Sales_data& rhs
+460beeb231908d18a07fd7b56faf297c|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|83|17|v|cpp
+	total.o
+c377968d897039cdf7e9fe67758e0145|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|67|43|v|cpp
+	, Sales_data& s
+1a94996d2b78a655b73f0e0f93ca7024|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|103|21|v|cpp
+	, total
+7af1b943ecfc10916e5c8b0f4e9852f2|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|106|20|v|cpp
+	, trans
+f877bc9e8024f5e1bef8ffde28f1c96b|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|53|28|v|cpp
+	, const Sales_data &item
+b50af57b003c0ed62c7d2089f79c161a|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|45|32|v|cpp
+	, Sales_data &item
+447b7147e84be512208dcc0995d67ebc|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_4/7_13_UseIstreamConstructor.cpp|5|20|v|cpp
+	item
+6731ea0acc61a379112b61e8181263d4|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_2/7_9.cpp|14|1|V|cpp
+	public:
+470008c2444aaabe95659bfaf9d37bca|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_2/7_9.cpp|20|8|V|cpp
+	istream &read(istream &is, Person &item) {
+	  is >> item.name >> item.address;
+	  return is;
+	}
+	
+	ostream &print(ostream &os, Person item) {
+	  os << item.name << " " << item.address;
+	  return os;
+	}
+18997d891ba91a3d8fd23cdbd8a2daa9|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_2/7_9.cpp|15|27|v|cpp
+	, Person &item
+9ecc075e2766927ccbd32e934399412e|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_2/7_9.cpp|16|9|v|cpp
+	item.
+cc1af8739e092a67c451d9bb9b67ea32|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_2/7_9.cpp|20|28|v|cpp
+	, Person item
+3ab3ea4746cbef8288ffc24b41865083|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_2/7_9.cpp|34|1|V|cpp
+	  print(cout, p1);
+1c4fcf69dd6890766440c5d5810a55b2|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_2/7_9.cpp|34|1|V|cpp
+		p1.print(cout);
+34671eca8345ffc83294dbc41bded0a9|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_2/7_9.cpp|37|3|V|cpp
+	  print(cout, p2);
+9807befc4c85a45258818257a15d6a0f|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_2/7_9.cpp|38|17|v|cpp
+	cin, 
+e5a9d74b451cd96c7b3009d0730db281|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_2/7_9.cpp|38|20|v|cpp
+	, p2
+4565ab5dd150905641e423494c037b2e|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_2/7_9.cpp|38|7|v|cpp
+	read(read(p1), p2)
+dc5c85f66204d985ab0cd1d99290faec|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_2/7_9.cpp|38|15|v|cpp
+	istream &is
+2f6a712a84d9b74eb2e2d1856e325964|file:///home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_2/7_9.cpp|40|1|V|cpp
+	  // read(cin, p1);
+	  // read(cin, p2);

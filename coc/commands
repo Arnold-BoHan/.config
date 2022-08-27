@@ -1,2 +1,7 @@
 explorer
+editor.action.colorPresentation
+editor.action.pickColor
+workspace.clearWatchman
+workspace.workspaceFolders
+document.showIncomingCalls
 semanticTokens.inspect
