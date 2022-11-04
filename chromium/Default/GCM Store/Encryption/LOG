@@ -1,3 +1,2 @@
-2022/08/26-07:45:53.613 905b Reusing MANIFEST /home/bohn/.config/chromium/Default/GCM Store/Encryption/MANIFEST-000001
-2022/08/26-07:45:53.614 905b Recovering log #3
-2022/08/26-07:45:53.614 905b Reusing old log /home/bohn/.config/chromium/Default/GCM Store/Encryption/000003.log 
+2022/09/04-15:53:54.094 1741 Creating DB /home/bohn/.config/chromium/Default/GCM Store/Encryption since it was missing.
+2022/09/04-15:53:54.110 1741 Reusing MANIFEST /home/bohn/.config/chromium/Default/GCM Store/Encryption/MANIFEST-000001

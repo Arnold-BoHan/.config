@@ -1,3 +1,2 @@
-2022/08/26-07:45:50.812 3 Reusing MANIFEST /home/bohn/.config/chromium/Default/Session Storage/MANIFEST-000001
-2022/08/26-07:45:50.814 3 Recovering log #8
-2022/08/26-07:45:50.817 3 Reusing old log /home/bohn/.config/chromium/Default/Session Storage/000008.log 
+2022/09/04-15:53:51.023 4 Creating DB /home/bohn/.config/chromium/Default/Session Storage since it was missing.
+2022/09/04-15:53:51.065 4 Reusing MANIFEST /home/bohn/.config/chromium/Default/Session Storage/MANIFEST-000001

@@ -1,3 +1,2 @@
-2022/05/27-22:34:45.472 1c61 Reusing MANIFEST /home/bohn/.config/chromium/Default/Extension Scripts/MANIFEST-000001
-2022/05/27-22:34:45.473 1c61 Recovering log #3
-2022/05/27-22:34:45.473 1c61 Reusing old log /home/bohn/.config/chromium/Default/Extension Scripts/000003.log 
+2022/09/04-15:53:50.945 171d Creating DB /home/bohn/.config/chromium/Default/Extension Scripts since it was missing.
+2022/09/04-15:53:50.979 171d Reusing MANIFEST /home/bohn/.config/chromium/Default/Extension Scripts/MANIFEST-000001

@@ -1,3 +1,9 @@
+/home/bohn/VpanProject/git/MyNetdisk/HeaderFile/unixhead.h
+/home/bohn/.zshrc
+/home/bohn/.config/autostart/
+/home/bohn/.config/coc/
+/home/bohn/.bashrc
+/home/bohn/usefulData.txt
 /home/bohn/.config/nvim/init.vim
 /home/bohn/.config/nvim/nicehh
 /home/bohn/cppPrimer_Exercise/chapter_07/7_1/7_1_2/7_9.cpp
@@ -101,7 +107,6 @@
 /home/bohn/.xinitrc
 /home/bohn/.config/i3status/config
 /home/bohn/.config/i3/config
-/home/bohn/.zshrc
 /home/bohn/Algorithm/RecordFile.md
 /home/bohn/Algorithm/088_findMaxForm_474/findMaxForm.cpp
 /home/bohn/threadpool/Source/TaskPool.cpp
@@ -382,7 +387,6 @@
 /home/bohn/his
 /home/bohn/threadpool/Source/makefile
 /home/bohn/threadpool/makefile
-/home/bohn/VpanProject/git/MyNetdisk/HeaderFile/unixhead.h
 /home/bohn/VpanProject/git/MyNetdisk/SourceFile/add_fd_to_epoll.c
 /home/bohn/VpanProject/git/MyNetdisk/SourceFile/send_file_to_client.c
 /home/bohn/VpanProject/git/MyNetdisk/SourceFile/user_name_avaialbe.c

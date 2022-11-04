@@ -1,3 +1,2 @@
-2022/08/26-07:45:50.837 904e Reusing MANIFEST /home/bohn/.config/chromium/Default/shared_proto_db/MANIFEST-000001
-2022/08/26-07:45:50.837 904e Recovering log #3
-2022/08/26-07:45:50.838 904e Reusing old log /home/bohn/.config/chromium/Default/shared_proto_db/000003.log 
+2022/09/04-15:53:51.225 171d Creating DB /home/bohn/.config/chromium/Default/shared_proto_db since it was missing.
+2022/09/04-15:53:51.227 171d Reusing MANIFEST /home/bohn/.config/chromium/Default/shared_proto_db/MANIFEST-000001
